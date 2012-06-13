@@ -64,6 +64,16 @@ public class TestUserBean extends SuperTest {
 		assertTrue(null != user1.getId());	// user id is non-null				
 	}
 	
+	public void testFindByLoginName() {
+		UserBean ub1 = create();		
+		Session session = HibernateUtil.beginTransaction();
+		Query query = session.getNamedQuery("user.findByLoginName");
+		query.setString("name", ub1.getUserName());
+		UserBean ub2 = (UserBean) query.uniqueResult();
+		
+		assertTrue(ub1.getUserName().equals(ub2.getUserName()));
+	}
+	
 	@SuppressWarnings("unchecked")
 	public void testRetrieveList() {
 		List<UserBean> userList;
