@@ -28,29 +28,23 @@ public abstract class DAO<T> {
 	public T findByPrimaryKey(Class<T> c, Long primaryKey) {
 		
 		Session session = getSession();
-		session.beginTransaction();
 		@SuppressWarnings("unchecked")
 		T item = (T) session.get(c, primaryKey);
-		HibernateUtil.commitTransaction(session);
 		logger.debug(item.toString());
 		return item;
 	}
 	
 	protected List<T> findAll(T item) {
 		Session session = getSession();
-		session.beginTransaction();
 		Criteria criteria = session.createCriteria(item.getClass());
-		
 		@SuppressWarnings("unchecked")
 		List<T> list = (List<T>) criteria.list();
-		HibernateUtil.commitTransaction(session);
 		return  list;		
 	}
 	
 	@SuppressWarnings("unchecked")
 	protected List<T> findByExample(T item, boolean fuzzy) {
 		Session session = getSession();
-		session.beginTransaction();
 		Criteria criteria = session.createCriteria(item.getClass());
 		Example example = Example.create(item);
 		if ( fuzzy ) {
@@ -61,7 +55,6 @@ public abstract class DAO<T> {
 		criteria.add(example);
 		
 		List<T> list = (List<T>) criteria.list();
-		HibernateUtil.commitTransaction(session);
 		return  list;
 		
 	}
