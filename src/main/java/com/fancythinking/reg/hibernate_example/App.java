@@ -7,7 +7,7 @@ package com.fancythinking.reg.hibernate_example;
  */
 public class App {
 	/**
-	 * this is a comment I added at work.
+	 * this is a comment I added at work. xx
 	 */
 
 }
