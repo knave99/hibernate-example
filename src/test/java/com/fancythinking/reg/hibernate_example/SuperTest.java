@@ -3,19 +3,20 @@ package com.fancythinking.reg.hibernate_example;
 
 import java.util.Calendar;
 
+import junit.framework.TestCase;
+
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
+import com.fancythinking.reg.hibernate_example.bean.NameX;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
-
-import junit.framework.TestCase;
 
 public abstract class SuperTest extends TestCase {
 	
 	static {
-		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class });
+		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class, NameX.class });
 	}
 	
 	protected Logger logger = Logger.getLogger(getClass());

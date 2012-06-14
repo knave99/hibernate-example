@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
+import com.fancythinking.reg.hibernate_example.bean.NameX;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 
 public class HibernateUtil {
@@ -72,7 +73,7 @@ public class HibernateUtil {
 	}
 	
 	public static void main(String[] args) {
-		HibernateUtil.setBeanList( new Class[] { UserBean.class, CarBean.class} );
+		HibernateUtil.setBeanList( new Class[] { UserBean.class, CarBean.class, NameX.class} );
 		recreateDatabase();
 	}
 }

@@ -1,6 +1,8 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
 import com.fancythinking.reg.hibernate_example.dal.CarBeanDAO;
@@ -23,8 +25,14 @@ public class TestCarBean extends SuperTest {
 
 	public void testCreate() {
 		CarBean cb = new CarBean(new Date(), "Punto Grande", "Reg");
+		List<NameX> waitingList =  new ArrayList<NameX>();
+		waitingList.add(new NameX("Stuart", "Reg"));
+		waitingList.add(new NameX("Stuart", "Jayne"));
+		cb.setWaitingList(waitingList);
 		createCarBean(cb);
-		assertTrue(cb.getId() != null);
+		boolean id = cb.getId() != null;
+		boolean listEmpty = cb.getWaitingList().isEmpty();
+		assertTrue( id && listEmpty );
 	}
 	
 	public void testDestroy() {
