@@ -95,7 +95,7 @@ public class UserBean {
 	}
 	
 	
-	public String printMe() {
+	public String toString() {
 		return "id: "+  getId() + " user: " + getUserName() + " password: " + getPassword(); 
 	}
 	
