@@ -30,7 +30,6 @@ public abstract class DAO<T> {
 		Session session = getSession();
 		@SuppressWarnings("unchecked")
 		T item = (T) session.get(c, primaryKey);
-		logger.debug(item.toString());
 		return item;
 	}
 	

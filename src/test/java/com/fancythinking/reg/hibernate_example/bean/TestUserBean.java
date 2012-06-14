@@ -35,14 +35,14 @@ public class TestUserBean extends SuperTest {
 	
 
 
-	public void testCreate() {
-		UserBean user1 = create();
+	public void testcreateUserBean() {
+		UserBean user1 = createUserBean();
 		createdBeanId = user1.getId();		
 		assertTrue(null != user1.getId());	// user id is non-null				
 	}
 	
 	public void testFindByLoginName() {
-		UserBean ub1 = create();		
+		UserBean ub1 = createUserBean();		
 		Session session = HibernateUtil.beginTransaction();
 		Query query = session.getNamedQuery("user.findByLoginName");
 		query.setString("name", ub1.getUserName());
@@ -54,7 +54,7 @@ public class TestUserBean extends SuperTest {
 	@SuppressWarnings("unchecked")
 	public void testRetrieveList() {
 		List<UserBean> userList;
-		create();
+		createUserBean();
 		Session session = HibernateUtil.beginTransaction();
 		
 		Query query = session.createQuery("from UserBean");		
@@ -70,7 +70,7 @@ public class TestUserBean extends SuperTest {
 	
 	
 	public void testRetrieveHQL() {
-		UserBean user = create();
+		UserBean user = createUserBean();
 		long id = user.getId(); 
 		String userName = user.getUserName();
 		user = null;
@@ -124,7 +124,7 @@ public class TestUserBean extends SuperTest {
 	}
 	
 	public void testDestroy() {
-		UserBean user = create();
+		UserBean user = createUserBean();
 		long id = user.getId();
 		Session session = HibernateUtil.beginTransaction();
 		session.delete(user);

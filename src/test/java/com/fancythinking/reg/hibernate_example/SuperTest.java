@@ -6,6 +6,7 @@ import java.util.Calendar;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
+import com.fancythinking.reg.hibernate_example.bean.CarBean;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 
@@ -14,7 +15,7 @@ import junit.framework.TestCase;
 public abstract class SuperTest extends TestCase {
 	
 	static {
-		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class });
+		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class });
 	}
 	
 	protected Logger logger = Logger.getLogger(getClass());
@@ -23,7 +24,7 @@ public abstract class SuperTest extends TestCase {
 		super(testName);		
 	}
 	
-	protected UserBean create() {
+	protected UserBean createUserBean() {
 		UserBean user = new UserBean();
 		Session session = HibernateUtil.beginTransaction();
 		user.setUserName("Reg " + Math.random());
