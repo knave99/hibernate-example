@@ -32,6 +32,10 @@ public class HibernateUtil {
 		session.getTransaction().commit();
 	}
 	
+	public static void commitTransaction() {
+		getSession().getTransaction().commit();
+	}
+	
 	public static Session getSession() {
 		if ( factory == null ) {
 			Configuration config = getInitializedConfiguration();
