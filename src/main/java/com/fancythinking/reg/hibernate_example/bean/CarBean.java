@@ -8,6 +8,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SecondaryTable;
@@ -15,6 +17,8 @@ import javax.persistence.SecondaryTables;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.CollectionOfElements;
 
 
 
@@ -33,6 +37,13 @@ public class CarBean {
 	private Date modelYear;
 	private String modelName;
 	private String owner;
+	
+/*
+	@CollectionOfElements (targetElement=com.fancythinking.reg.hibernate_example.bean.NameX.class)
+	@JoinTable	(	name="tbl_join", 
+					joinColumns = @JoinColumn(name= "fk_car_bean")
+				)
+*/
 	private List<NameX> waitingList;
 	
 	
@@ -67,7 +78,10 @@ public class CarBean {
 		this.modelName = modelName;
 	}
 
-	@OneToMany (mappedBy="id")
+	@Embedded
+	@OneToMany (mappedBy="id",
+			targetEntity=com.fancythinking.reg.hibernate_example.bean.NameX.class
+	)
 	public List<NameX> getWaitingList() {
 		return waitingList;
 	}

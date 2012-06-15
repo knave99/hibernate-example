@@ -1,5 +1,7 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
+import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,8 +10,14 @@ import javax.persistence.Table;
 
 
 @Entity
+@Embeddable
 @Table	(name="tbl_waiting_list")
-public class NameX {
+public class NameX implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8697086604069711020L;
+
 	@Id
 	@GeneratedValue
 	public Long getId() {

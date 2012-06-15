@@ -30,9 +30,15 @@ public class TestCarBean extends SuperTest {
 		waitingList.add(new NameX("Stuart", "Jayne"));
 		cb.setWaitingList(waitingList);
 		createCarBean(cb);
-		boolean id = cb.getId() != null;
-		boolean listEmpty = cb.getWaitingList().isEmpty();
-		assertTrue( id && listEmpty );
+		Long id = cb.getId();
+		assertTrue(id != null);
+		
+		cb = null;
+		cb = findBean(id);
+		assertTrue( cb != null );
+		assertTrue( cb.getWaitingList().isEmpty() != true );
+		
+		logger.debug(cb.toString());				
 	}
 	
 	public void testDestroy() {
