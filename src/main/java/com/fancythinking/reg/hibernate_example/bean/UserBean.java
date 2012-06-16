@@ -8,11 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
+@Table (name="tbl_user")
+@NamedQuery (name="user.findByLoginName", query="from UserBean where userName = :name")
 public class UserBean {
 
 	private Long id;

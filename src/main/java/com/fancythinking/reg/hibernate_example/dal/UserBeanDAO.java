@@ -5,12 +5,15 @@ import java.util.List;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 
 public class UserBeanDAO extends DAO<UserBean> {
-
+	
 	public UserBean findByPrimaryKey(Long id) {
 		return super.findByPrimaryKey(UserBean.class, id);
 	}
 	
-	public List<UserBean> findAll() {		
+	public List<UserBean> findAll() {
 		return super.findAll(new UserBean());
 	}
+	
+
+	
 }

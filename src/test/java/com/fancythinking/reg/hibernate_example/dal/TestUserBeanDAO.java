@@ -15,7 +15,7 @@ public class TestUserBeanDAO extends SuperTest {
 	}
 
 	public void testFindByPrimaryKey() {
-		UserBean b1 = create();
+		UserBean b1 = createUserBean();
 		long id = b1.getId();
 		HibernateUtil.beginTransaction();
 		logger.debug(">>>created: " + b1.toString());
@@ -31,7 +31,7 @@ public class TestUserBeanDAO extends SuperTest {
 	
 	public void testFindByCriteria() {
 		logger.debug("Test findByCriteria ");
-		UserBean b1 = create();
+		UserBean b1 = createUserBean();
 		logger.debug(">>>created: " + b1.toString());
 		
 		UserBeanDAO dao = new UserBeanDAO();		

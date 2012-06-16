@@ -60,12 +60,19 @@
 	  <artifactId>postgressql</artifactId>
 	  <version>9.0-801</version>
 	</dependency>
+
 	<dependency>
    		<groupId>org.hibernate</groupId>
    		<artifactId>hibernate-annotations</artifactId>
    		<version>3.4.0.GA</version>
 	</dependency>
+	<dependency>
+    	<groupId>org.codehaus.mojo</groupId>
+    	<artifactId>properties-maven-plugin</artifactId>
+    	<version>1.0-alpha-1</version>
+  	</dependency> 	
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -77,6 +84,25 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>1.0-alpha-2</version>
+        <executions>
+        	<execution>
+
+            <goals>
+              <goal>read-project-properties</goal>
+            </goals>
+            <configuration>
+              <files>
+                <file>${basedir}/dbDriver.properties</file>
+              </files>
+            </configuration>
+            </execution>
+        </executions>
+      </plugin>
+      
     </plugins>
   </build>  
 </project>
