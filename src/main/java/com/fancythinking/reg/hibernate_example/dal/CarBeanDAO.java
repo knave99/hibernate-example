@@ -12,4 +12,5 @@ public class CarBeanDAO extends DAO<CarBean> {
 	public List<CarBean> findAll() {
 		return super.findAll(new CarBean());
 	}
+
 }

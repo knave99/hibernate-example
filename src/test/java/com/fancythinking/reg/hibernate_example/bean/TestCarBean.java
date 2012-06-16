@@ -8,20 +8,17 @@ import com.fancythinking.reg.hibernate_example.SuperTest;
 import com.fancythinking.reg.hibernate_example.dal.CarBeanDAO;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 
-public class TestCarBean extends SuperTest {
+public class TestCarBean extends SuperTest<CarBean> {
 
-	CarBeanDAO dao = new CarBeanDAO();
+	public void setUp() {
+		dao = new CarBeanDAO();
+	}
 	
 	public TestCarBean(String testName) {
 		super(testName);
 		// TODO Auto-generated constructor stub
 	}
 	
-	private void createCarBean(CarBean cb) {		
-		HibernateUtil.beginTransaction();
-		dao.save(cb);
-		HibernateUtil.commitTransaction();		
-	}
 
 	public void testCreate() {
 		CarBean cb = new CarBean(new Date(), "Punto Grande", "Reg");
@@ -29,7 +26,7 @@ public class TestCarBean extends SuperTest {
 		waitingList.add(new NameX("Stuart", "Reg"));
 		waitingList.add(new NameX("Stuart", "Jayne"));
 		cb.setWaitingList(waitingList);
-		createCarBean(cb);
+		create(cb);
 		Long id = cb.getId();
 		assertTrue(id != null);
 		
@@ -43,7 +40,7 @@ public class TestCarBean extends SuperTest {
 	
 	public void testDestroy() {
 		CarBean cb = new CarBean(new Date(), "Destructoid", "Reg");
-		createCarBean(cb);
+		create(cb);
 		
 		HibernateUtil.beginTransaction();
 		Long id = cb.getId();
@@ -54,19 +51,11 @@ public class TestCarBean extends SuperTest {
 		assertTrue( null == cb );
 	}
 	
-	private CarBean findBean(Long id) {
-		CarBean cb = null;		
-		HibernateUtil.beginTransaction();
-		{
-			cb = dao.findByPrimaryKey(id);
-		}
-		HibernateUtil.commitTransaction();
-		return cb;
-	}
+
 	
 	public void testUpdate() {
 		CarBean cb = new CarBean(new Date(), "Updater", "Reg");
-		createCarBean(cb);
+		create(cb);
 		Long id = cb.getId();
 		String model = "Diablo";
 		 

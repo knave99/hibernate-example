@@ -8,17 +8,21 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 import org.hibernate.criterion.MatchMode;
 
-public abstract class DAO<T> {
+public abstract class DAO<T> implements IDAO<T> {
 	
 	
 	protected Logger logger = Logger.getLogger(getClass());
 
-	protected Session getSession() {
+	public Session getSession() {
 		return HibernateUtil.getSession();
 	}
 	
 	public void save(T item) {
-		getSession().saveOrUpdate(item);
+		if ( item == null ) {
+			logger.error("Cannot save null");
+		} else {
+			getSession().saveOrUpdate(item);
+		}
 	}
 	
 	public void delete(T item) {
@@ -33,7 +37,7 @@ public abstract class DAO<T> {
 		return item;
 	}
 	
-	protected List<T> findAll(T item) {
+	public List<T> findAll(T item) {
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(item.getClass());
 		@SuppressWarnings("unchecked")
@@ -42,7 +46,7 @@ public abstract class DAO<T> {
 	}
 	
 	@SuppressWarnings("unchecked")
-	protected List<T> findByExample(T item, boolean fuzzy) {
+	public List<T> findByExample(T item, boolean fuzzy) {
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(item.getClass());
 		Example example = Example.create(item);

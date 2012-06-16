@@ -9,43 +9,53 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
+import com.fancythinking.reg.hibernate_example.bean.Course;
 import com.fancythinking.reg.hibernate_example.bean.NameX;
+import com.fancythinking.reg.hibernate_example.bean.Student;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
+import com.fancythinking.reg.hibernate_example.dal.DAO;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
+import com.fancythinking.reg.hibernate_example.dal.IDAO;
 
-public abstract class SuperTest extends TestCase {
+public abstract class SuperTest<T> extends TestCase {
 	
 	static {
-		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class, NameX.class });
+		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class, NameX.class, Student.class, Course.class });
 	}
 	
+	protected IDAO<T> dao;
 	protected Logger logger = Logger.getLogger(getClass());
 	
 	public SuperTest(String testName) {
 		super(testName);		
 	}
 	
-	protected UserBean createUserBean() {
-		UserBean user = new UserBean();
-		Session session = HibernateUtil.beginTransaction();
-		user.setUserName("Reg " + Math.random());
-		user.setFirstName("FN: Reg " + Math.random());
-		user.setLastName("LN: Stuart " + Math.random());
-		user.setPassword("Password " + Math.random());
-		
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.YEAR, 1975);
-		cal.set(Calendar.MONTH, 4);
-		cal.set(Calendar.DAY_OF_MONTH, 5);
-		cal.set(Calendar.HOUR, 13);
-		cal.set(Calendar.MINUTE, 12);
-		cal.set(Calendar.SECOND, 15);
-		user.setMyCal(cal);		
-		user.setDateOfBirth(cal.getTime());
-		user.setFondestMemory("This is my fondest memory!  blah blah blah!");
-		session.saveOrUpdate(user);
-		HibernateUtil.commitTransaction(session);
-		return user;
+	public abstract void setUp();
+	
+	public void create(T cb) {		
+		HibernateUtil.beginTransaction();
+		dao.save(cb);
+		HibernateUtil.commitTransaction();		
 	}
+	
+	public T findBean(Long id) {
+		T item = null;
+		HibernateUtil.beginTransaction();
+		{
+			item = dao.findByPrimaryKey(id);
+		}
+		return item;
+	}
+
+	
+	public abstract void testCreate();
+	
+	public abstract void testUpdate();
+	
+	public abstract void testDestroy();
+	
+	
+	
+
 	
 }
