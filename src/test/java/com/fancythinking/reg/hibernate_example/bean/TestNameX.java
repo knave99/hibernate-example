@@ -31,6 +31,7 @@ public class TestNameX extends SuperTest {
 		assertTrue(id != null);
 	}
 	
+	/*
 	public void testDestroy() {
 		NameX x = new NameX("For", "Destroy");
 		createName(x);
@@ -43,6 +44,7 @@ public class TestNameX extends SuperTest {
 		HibernateUtil.commitTransaction();
 		assertTrue( null == x );
 	}
+	*/
 	
 	private NameX findBean(Long id) {
 		NameX x = null;		

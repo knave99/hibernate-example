@@ -3,9 +3,11 @@ package com.fancythinking.reg.hibernate_example.bean;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -44,6 +46,8 @@ public class CarBean {
 					joinColumns = @JoinColumn(name= "fk_car_bean")
 				)
 */
+
+	
 	private List<NameX> waitingList;
 	
 	
@@ -78,10 +82,17 @@ public class CarBean {
 		this.modelName = modelName;
 	}
 
+	/*
 	@Embedded
 	@OneToMany (mappedBy="id",
 			targetEntity=com.fancythinking.reg.hibernate_example.bean.NameX.class
 	)
+	*/
+	@OneToMany	(	mappedBy="myCar",
+					targetEntity=NameX.class,
+					fetch=FetchType.EAGER,
+					cascade=CascadeType.ALL			
+				)
 	public List<NameX> getWaitingList() {
 		return waitingList;
 	}

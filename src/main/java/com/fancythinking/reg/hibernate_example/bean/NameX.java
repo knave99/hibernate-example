@@ -6,12 +6,13 @@ import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
 @Entity
-@Embeddable
-@Table	(name="tbl_waiting_list")
+@Table	(name="tbl_nameX")
 public class NameX implements Serializable {
 	/**
 	 * 
@@ -30,7 +31,16 @@ public class NameX implements Serializable {
 	private Long id;
 	private String firstName;
 	private String surname;
+	private CarBean myCar;
 	
+	@ManyToOne
+	@JoinColumn	(name="car_id")
+	public CarBean getMyCar() {
+		return myCar;
+	}
+	public void setMyCar(CarBean myCar) {
+		this.myCar = myCar;
+	}
 	public NameX() {}
 	public NameX(String lastName, String firstName) {
 		surname = lastName;
