@@ -16,10 +16,11 @@ public class BinaryFile implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -7439269388206855162L;
-	Long id;
-	Byte[] bytes;
-	String fileName;
-	String fileType;
+	private Long id;
+	private byte[] bytes;
+	private String path;
+	private String name;
+	private String type;
 	
 	@Id
 	@GeneratedValue
@@ -29,32 +30,41 @@ public class BinaryFile implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Byte[] getBytes() {
+	
+	@Transient
+	public String getFullPath() {
+		return path + "/" + name + "." + type;
+	}
+	
+	@Lob
+	public byte[] getBytes() {
 		return bytes;
 	}
-	@Lob
-	public void setBytes(Byte[] bytes) {
+	public void setBytes(byte[] bytes) {
 		this.bytes = bytes;
 	}
-	@Transient
-	public void setBytes(byte[] bytes) {
-		this.bytes = new Byte[bytes.length];
-		for ( int x=0; x < bytes.length; x++ ) {
-			this.bytes[x] = bytes[x];
-		}
+	public String getPath() {
+		return path;
 	}
-	public String getFileName() {
-		return fileName;
+	public void setPath(String path) {
+		this.path = path;
 	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public String getName() {
+		return name;
 	}
-	public String getFileType() {
-		return fileType;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
+	public String getType() {
+		return type;
 	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	
 	
 }

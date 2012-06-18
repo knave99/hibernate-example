@@ -1,13 +1,5 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-
-import javax.xml.stream.util.StreamReaderDelegate;
-
 import com.fancythinking.reg.hibernate_example.SuperTest;
 import com.fancythinking.reg.hibernate_example.dal.BinaryFileDAO;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
@@ -26,12 +18,12 @@ public class BinaryFileTest extends SuperTest<BinaryFile> {
 	public BinaryFile createBinaryFile() {
 		BinaryFile fileObject = new BinaryFile();
 
-		String fileName = "AllVenoxis";
-		String path = "F:/uploads/";
-		String fileType = "jpg";
-		byte[] array = BinaryFileUtil.read(path + fileName + "." + fileType); 
+		//String fileName = "maven-complete-reference";
+		fileObject.setName("GIT");
+		fileObject.setPath("C:/work");
+		fileObject.setType("pdf");
+		byte[] array = BinaryFileUtil.read(fileObject.getFullPath()); 
 		fileObject.setBytes(array);
-		fileObject.setFileName(fileName+"."+fileType);
 		create(fileObject);
 
 		return fileObject;
@@ -42,44 +34,44 @@ public class BinaryFileTest extends SuperTest<BinaryFile> {
 		BinaryFile f = createBinaryFile();
 		Long id = f.getId();
 		f = null;
-		f = findBean(id);		
+		HibernateUtil.beginTransaction();
+		f = dao.findByPrimaryKey(id);
 		assertTrue(f.getId() != null);
 		assertTrue(f.getBytes() != null);
 		assertTrue(f.getBytes().length > 0);
+		HibernateUtil.commitTransaction();
+		BinaryFileUtil.writeFile("c:/work/Git_out.pdf", f.getBytes());
 	}
 
 	@Override
 	public void testUpdate() {
-		BinaryFile c1 = createBinaryFile();
+		BinaryFile f = createBinaryFile();
+		
+		HibernateUtil.beginTransaction();				
+		f.setName("README");
+		f.setType("txt");
+		f.setBytes(BinaryFileUtil.read(f.getFullPath()));
+		dao.save(f);		
+		HibernateUtil.commitTransaction();
+		Long id = f.getId();
+		f = null;
 		
 		HibernateUtil.beginTransaction();
-		Long id = c1.getId();
-/*
-		f.
-		c1.getStudentList().get(0).setFirstName(first);
-		dao.save(c1);
-		c1 = null;
-		c1 = dao.findByPrimaryKey(id);
-		HibernateUtil.commitTransaction();
-
-		assertTrue(chemistry.equals(c1.getName()));
-		assertTrue(first.equals(c1.getStudentList().get(0).getFirstName()));
-*/
-		assertTrue(false);
+		f = dao.findByPrimaryKey(id);
+		assertTrue("README".equals(f.getName()));
+		BinaryFileUtil.writeFile("c:/work/read_out.txt", f.getBytes());
+		HibernateUtil.commitTransaction();		
 	}
 
 	@Override
 	public void testDestroy() {
-		/*
-		BinaryFile c1 = createBinaryFile();
+		BinaryFile f = createBinaryFile();
 		HibernateUtil.beginTransaction();		
-		dao.delete(c1);
-		c1 = dao.findByPrimaryKey(c1.getBinaryFileId());
+		dao.delete(f);
+		f = dao.findByPrimaryKey(f.getId());
 		HibernateUtil.commitTransaction();
-		
-		assertTrue(c1 == null);
-		*/
-		assertTrue(false);
+		assertTrue(f == null);
+
 	}
 
 }

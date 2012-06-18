@@ -1,26 +1,30 @@
 package com.fancythinking.reg.hibernate_example;
 
 
-import java.util.Calendar;
-
 import junit.framework.TestCase;
 
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
 
+import com.fancythinking.reg.hibernate_example.bean.BinaryFile;
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
 import com.fancythinking.reg.hibernate_example.bean.Course;
 import com.fancythinking.reg.hibernate_example.bean.NameX;
 import com.fancythinking.reg.hibernate_example.bean.Student;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
-import com.fancythinking.reg.hibernate_example.dal.DAO;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 import com.fancythinking.reg.hibernate_example.dal.IDAO;
 
 public abstract class SuperTest<T> extends TestCase {
 	
 	static {
-		HibernateUtil.setBeanList( new Class<?>[] { UserBean.class, CarBean.class, NameX.class, Student.class, Course.class });
+		HibernateUtil.setBeanList( new Class<?>[] { 
+				UserBean.class, 
+				CarBean.class, 
+				NameX.class, 
+				Student.class, 
+				Course.class,
+				BinaryFile.class
+		});
 	}
 	
 	protected IDAO<T> dao;

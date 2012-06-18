@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -52,5 +53,30 @@ public class BinaryFileUtil {
 			logger.debug(ex);
 		}
 		return result;
+	}
+	
+	public static void writeFile(String filePath, byte[] array) {
+		FileOutputStream fout = null;
+		File file = null;
+		try {
+			file = new File(filePath);
+			fout = new FileOutputStream(file);			
+			fout.write(array);
+			fout.flush();	
+			
+		} catch (FileNotFoundException fnf) {
+			fnf.printStackTrace();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} finally {		
+			if ( fout != null) {
+				try {
+					fout.close();
+				} catch (IOException ioe) {
+					ioe.printStackTrace();
+				}
+			}			
+		}
+		
 	}
 }

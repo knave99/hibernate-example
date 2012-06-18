@@ -1,11 +1,6 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.CarBeanDAO;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 import com.fancythinking.reg.hibernate_example.dal.NameXDAO;
 
