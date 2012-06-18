@@ -1,5 +1,6 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
+import java.beans.Transient;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ public class BinaryFile implements Serializable {
 	 */
 	private static final long serialVersionUID = -7439269388206855162L;
 	Long id;
-	byte[] bytes;
+	Byte[] bytes;
 	String fileName;
 	String fileType;
 	
@@ -27,11 +28,18 @@ public class BinaryFile implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public byte[] getBytes() {
+	public Byte[] getBytes() {
 		return bytes;
-	}
-	public void setBytes(byte[] bytes) {
+	}	
+	public void setBytes(Byte[] bytes) {
 		this.bytes = bytes;
+	}
+	@Transient
+	public void setBytes(byte[] bytes) {
+		this.bytes = new Byte[bytes.length];
+		for ( int x=0; x < bytes.length; x++ ) {
+			this.bytes[x] = bytes[x];
+		}
 	}
 	public String getFileName() {
 		return fileName;
