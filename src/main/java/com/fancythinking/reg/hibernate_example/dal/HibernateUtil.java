@@ -6,6 +6,11 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 
+import com.fancythinking.reg.hibernate_example.bean.BinaryFile;
+import com.fancythinking.reg.hibernate_example.bean.CarBean;
+import com.fancythinking.reg.hibernate_example.bean.Course;
+import com.fancythinking.reg.hibernate_example.bean.NameX;
+import com.fancythinking.reg.hibernate_example.bean.Student;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 
 public class HibernateUtil {
@@ -30,6 +35,10 @@ public class HibernateUtil {
 	
 	public static void commitTransaction(Session session) {
 		session.getTransaction().commit();
+	}
+	
+	public static void commitTransaction() {
+		getSession().getTransaction().commit();
 	}
 	
 	public static Session getSession() {
@@ -67,7 +76,7 @@ public class HibernateUtil {
 	}
 	
 	public static void main(String[] args) {
-		HibernateUtil.setBeanList( new Class[] { UserBean.class} );
+		HibernateUtil.setBeanList( new Class[] { UserBean.class, CarBean.class, NameX.class, Student.class, Course.class, BinaryFile.class } );
 		recreateDatabase();
 	}
 }

@@ -6,12 +6,11 @@
 
   <session-factory>
 
-    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="hibernate.connection.url">jdbc:sqlserver://cahdwpcs:1443;databaseName=examscam</property>
-    <property name="hibernate.connection.username">spring</property>
-    <property name="hibernate.connection.password">spring</property>
-    <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
-
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/examscam</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">3Round1House4</property>
 
     <property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
 
