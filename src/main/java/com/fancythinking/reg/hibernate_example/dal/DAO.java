@@ -1,5 +1,6 @@
 package com.fancythinking.reg.hibernate_example.dal;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -29,6 +30,14 @@ public abstract class DAO<T> implements IDAO<T> {
 		getSession().delete(item);
 	}
 	
+	public T findByPrimaryKey(Class<T> c, Serializable primaryKey) {
+		
+		Session session = getSession();
+		@SuppressWarnings("unchecked")
+		T item = (T) session.get(c, primaryKey);
+		return item;
+	}
+ 	
 	public T findByPrimaryKey(Class<T> c, Long primaryKey) {
 		
 		Session session = getSession();

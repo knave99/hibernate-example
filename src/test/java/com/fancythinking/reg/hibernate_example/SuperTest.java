@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import com.fancythinking.reg.hibernate_example.bean.BinaryFile;
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
 import com.fancythinking.reg.hibernate_example.bean.Course;
+import com.fancythinking.reg.hibernate_example.bean.InvoiceBean;
 import com.fancythinking.reg.hibernate_example.bean.NameX;
 import com.fancythinking.reg.hibernate_example.bean.Student;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
@@ -23,7 +24,8 @@ public abstract class SuperTest<T> extends TestCase {
 				NameX.class, 
 				Student.class, 
 				Course.class,
-				BinaryFile.class
+				BinaryFile.class,
+				InvoiceBean.class
 		});
 	}
 	
