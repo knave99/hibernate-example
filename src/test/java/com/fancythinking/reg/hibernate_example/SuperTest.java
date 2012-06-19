@@ -1,6 +1,8 @@
 package com.fancythinking.reg.hibernate_example;
 
 
+import java.io.Serializable;
+
 import junit.framework.TestCase;
 
 import org.apache.log4j.Logger;
@@ -15,7 +17,7 @@ import com.fancythinking.reg.hibernate_example.bean.UserBean;
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 import com.fancythinking.reg.hibernate_example.dal.IDAO;
 
-public abstract class SuperTest<T> extends TestCase {
+public abstract class SuperTest<T, ID extends Serializable> extends TestCase {
 	
 	static {
 		HibernateUtil.setBeanList( new Class<?>[] { 
@@ -29,7 +31,7 @@ public abstract class SuperTest<T> extends TestCase {
 		});
 	}
 	
-	protected IDAO<T> dao;
+	protected IDAO<T, ID> dao;
 	protected Logger logger = Logger.getLogger(getClass());
 	
 	public SuperTest(String testName) {
@@ -44,13 +46,8 @@ public abstract class SuperTest<T> extends TestCase {
 		HibernateUtil.commitTransaction();		
 	}
 	
-	public T findBean(Long id) {
-		T item = null;
-		HibernateUtil.beginTransaction();
-		{
-			item = dao.findByPrimaryKey(id);
-		}
-		return item;
+	public T findBean(ID id) {		
+		return (T) dao.findByPrimaryKey(id);
 	}
 
 	

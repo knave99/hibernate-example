@@ -11,13 +11,12 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
-import com.fancythinking.reg.hibernate_example.dal.UserBeanDAO;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
 
 /**
  * Unit test for simple App.
  */
-public class TestUserBean extends SuperTest<UserBean> {
+public class TestUserBean extends SuperTest<UserBean, Long> {
 	/**
 	 * Create the test case
 	 * 
@@ -32,7 +31,7 @@ public class TestUserBean extends SuperTest<UserBean> {
 	}
 	
 	public void setUp() {
-		dao = new UserBeanDAO();
+		dao = DAOFactory.getInstance().getUserBeanDAO();
 	}
 
 	
@@ -49,11 +48,12 @@ public class TestUserBean extends SuperTest<UserBean> {
 	
 	public void testFindByLoginName() {
 		UserBean ub1 = createUserBean();		
-		Session session = HibernateUtil.beginTransaction();
+		dao.beginTransaction();
+		Session session= dao.getSession();
 		Query query = session.getNamedQuery("user.findByLoginName");
 		query.setString("name", ub1.getUserName());
 		UserBean ub2 = (UserBean) query.uniqueResult();
-		
+		dao.commitTransaction();
 		assertTrue(ub1.getUserName().equals(ub2.getUserName()));
 	}
 	
@@ -61,11 +61,11 @@ public class TestUserBean extends SuperTest<UserBean> {
 	public void testRetrieveList() {
 		List<UserBean> userList;
 		createUserBean();
-		Session session = HibernateUtil.beginTransaction();
-		
+		dao.beginTransaction();
+		Session session = dao.getSession();		
 		Query query = session.createQuery("from UserBean");		
 		userList = (List<UserBean>) query.list();		
-		HibernateUtil.commitTransaction(session);
+		dao.commitTransaction();
 		for ( UserBean u : userList ) {
 			logger.debug("User: " + u.getUserName() + " Pass: " + u.getPassword() + " id: " + u.getId());
 		}
@@ -86,12 +86,12 @@ public class TestUserBean extends SuperTest<UserBean> {
 	
 	private UserBean getUserWithHQL(long id) {
 		String querySting = "FROM UserBean WHERE id = :id";
-		Session session = HibernateUtil.beginTransaction();		
+		dao.beginTransaction();
+		Session session = dao.getSession();		
 		Query query = session.createQuery(querySting);
 		query.setLong("id", id);
-		UserBean user = (UserBean) query.uniqueResult();
-		
-		HibernateUtil.commitTransaction(session);
+		UserBean user = (UserBean) query.uniqueResult();		
+		dao.commitTransaction();
 		return user;
 	}
 	
@@ -99,42 +99,43 @@ public class TestUserBean extends SuperTest<UserBean> {
 	public void testUpdate() {
 		String tempPass = "password";
 		List<UserBean> userList;
-		Session session = HibernateUtil.beginTransaction();
-		
+		Session session = dao.getSession();
+		session.beginTransaction();
 		Query query = session.createQuery("from UserBean");		
 		userList = (List<UserBean>) query.list();
 		for ( UserBean b : userList ) {
 			b.setPassword(tempPass);
 			session.save(b);
 		}		
-		HibernateUtil.commitTransaction(session);
+		dao.commitTransaction();
 		userList = null;
 				
-		session = HibernateUtil.beginTransaction();
-		
+		session = dao.getSession();
+		session.beginTransaction();
 		query = session.createQuery("from UserBean");		
 		userList = (List<UserBean>) query.list();
 		for ( UserBean b : userList ) {
 			assertTrue( tempPass.equals(b.getPassword()) );		
 		}
-		HibernateUtil.commitTransaction(session);
-		session = HibernateUtil.beginTransaction();
-				
+		dao.commitTransaction();
+		session = dao.getSession();
+		session.beginTransaction();	
 		query = session.createQuery("from UserBean");
 		userList = (List<UserBean>) query.list();
 		for ( UserBean b : userList ) {
 			b.setPassword(String.valueOf(Math.random()));
 			session.update(b);
 		}		
-		HibernateUtil.commitTransaction(session);
+		dao.commitTransaction();
 	}
 	
 	public void testDestroy() {
 		UserBean user = createUserBean();
 		long id = user.getId();
-		Session session = HibernateUtil.beginTransaction();
+		Session session = dao.getSession();
+		session.beginTransaction();
 		session.delete(user);
-		HibernateUtil.commitTransaction(session);
+		dao.commitTransaction();
 		// delete the user
 		
 		
@@ -153,7 +154,7 @@ public class TestUserBean extends SuperTest<UserBean> {
 	
 	protected UserBean createUserBean() {
 		UserBean user = new UserBean();
-		Session session = HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		user.setUserName("Reg " + Math.random());
 		user.setFirstName("FN: Reg " + Math.random());
 		user.setLastName("LN: Stuart " + Math.random());
@@ -169,8 +170,8 @@ public class TestUserBean extends SuperTest<UserBean> {
 		user.setMyCal(cal);		
 		user.setDateOfBirth(cal.getTime());
 		user.setFondestMemory("This is my fondest memory!  blah blah blah!");
-		session.saveOrUpdate(user);
-		HibernateUtil.commitTransaction(session);
+		dao.save(user);
+		dao.commitTransaction();
 		return user;
 	}
 }

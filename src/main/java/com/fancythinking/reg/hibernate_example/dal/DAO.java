@@ -9,10 +9,25 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 import org.hibernate.criterion.MatchMode;
 
-public abstract class DAO<T> implements IDAO<T> {
+public abstract class DAO<T, ID extends Serializable> implements IDAO<T, ID> {
 	
 	
 	protected Logger logger = Logger.getLogger(getClass());
+	private Class<T> persistentClass;
+	
+	public DAO(Class<T> persistentClass) {
+		this.persistentClass = persistentClass;
+	}
+	
+
+	public void beginTransaction() {
+		HibernateUtil.beginTransaction();
+	}
+
+	public void commitTransaction() {
+		HibernateUtil.commitTransaction();		
+	}
+
 
 	public Session getSession() {
 		return HibernateUtil.getSession();
@@ -38,20 +53,25 @@ public abstract class DAO<T> implements IDAO<T> {
 		return item;
 	}
  	
-	public T findByPrimaryKey(Class<T> c, Long primaryKey) {
-		
-		Session session = getSession();
+	public T findByPrimaryKey(ID id) {				
 		@SuppressWarnings("unchecked")
-		T item = (T) session.get(c, primaryKey);
+		T item = (T) getSession().get(persistentClass, id);
 		return item;
 	}
 	
 	public List<T> findAll(T item) {
-		Session session = getSession();
-		Criteria criteria = session.createCriteria(item.getClass());
+		Criteria criteria = getSession().createCriteria(item.getClass());
 		@SuppressWarnings("unchecked")
 		List<T> list = (List<T>) criteria.list();
 		return  list;		
+	}
+		
+	@SuppressWarnings("unchecked")
+	public List<T> findAll(int startIndex, int fetchSize) {
+		Criteria criteria = getSession().createCriteria(persistentClass);
+		criteria.setFirstResult(startIndex);
+		criteria.setFetchSize(fetchSize);
+		return criteria.list();
 	}
 	
 	@SuppressWarnings("unchecked")

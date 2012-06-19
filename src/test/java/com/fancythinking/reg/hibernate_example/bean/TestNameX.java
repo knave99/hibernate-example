@@ -1,12 +1,9 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
-import com.fancythinking.reg.hibernate_example.dal.NameXDAO;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
 
-public class TestNameX extends SuperTest<NameX> {
-
-	NameXDAO dao = new NameXDAO();
+public class TestNameX extends SuperTest<NameX, Long> {	
 	
 	public TestNameX(String testName) {
 		super(testName);
@@ -14,7 +11,7 @@ public class TestNameX extends SuperTest<NameX> {
 	}
 	
 	public void setUp() {
-		dao = new NameXDAO();
+		dao = DAOFactory.getInstance().getNameXDAO();
 	}
 
 
@@ -30,12 +27,12 @@ public class TestNameX extends SuperTest<NameX> {
 		NameX x = new NameX("For", "Destroy");
 		create(x);
 				
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		Long id = x.getId();
 		logger.debug("To delete " + x.toString());
 		dao.delete(x);
 		x = dao.findByPrimaryKey(id);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		assertTrue( null == x );
 	}
 
@@ -46,14 +43,15 @@ public class TestNameX extends SuperTest<NameX> {
 		Long id = x.getId();
 		
 		 
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		{ 	
 				x.setFirstName("Bruce");				
 				dao.save(x);
+				x = findBean(id);
 		}		
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		
-		x = findBean(id);		
+				
 		assertTrue("Bruce".equals(x.getFirstName()));
 	}
 

@@ -5,18 +5,16 @@ import java.util.Date;
 import java.util.List;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.CarBeanDAO;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
 
-public class TestCarBean extends SuperTest<CarBean> {
+public class TestCarBean extends SuperTest<CarBean, Long> {
 
 	public void setUp() {
-		dao = new CarBeanDAO();
+		dao = DAOFactory.getInstance().getCarBeanDAO();
 	}
 	
 	public TestCarBean(String testName) {
 		super(testName);
-		// TODO Auto-generated constructor stub
 	}
 	
 
@@ -31,7 +29,10 @@ public class TestCarBean extends SuperTest<CarBean> {
 		assertTrue(id != null);
 		
 		cb = null;
+		dao.beginTransaction();
 		cb = findBean(id);
+		
+		dao.commitTransaction();
 		assertTrue( cb != null );
 		assertTrue( cb.getWaitingList().isEmpty() != true );
 		
@@ -42,12 +43,12 @@ public class TestCarBean extends SuperTest<CarBean> {
 		CarBean cb = new CarBean(new Date(), "Destructoid", "Reg");
 		create(cb);
 		
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		Long id = cb.getId();
 		logger.debug("To delete " + cb.toString());
 		dao.delete(cb);
 		cb = dao.findByPrimaryKey(id);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		assertTrue( null == cb );
 	}
 	
@@ -59,15 +60,16 @@ public class TestCarBean extends SuperTest<CarBean> {
 		Long id = cb.getId();
 		String model = "Diablo";
 		 
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		{ 	
 				cb.setModelName(model);
 				cb.setOwner("Regmeister!");
 				dao.save(cb);
+				cb = findBean(id);	
 		}		
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		
-		cb = findBean(id);		
+			
 		assertTrue(cb.getModelName().equals(model));
 	}
 

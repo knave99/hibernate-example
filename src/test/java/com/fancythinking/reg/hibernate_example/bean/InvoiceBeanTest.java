@@ -4,11 +4,10 @@ import java.util.Date;
 import java.util.List;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.BinaryFileDAO;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
-import com.fancythinking.reg.hibernate_example.dal.InvoiceBeanDAO;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
+import com.fancythinking.reg.hibernate_example.dal.IBinaryFileDAO;
 
-public class InvoiceBeanTest extends SuperTest<InvoiceBean> {
+public class InvoiceBeanTest extends SuperTest<InvoiceBean, String> {
 
 	public InvoiceBeanTest(String testName) {
 		super(testName);
@@ -16,7 +15,7 @@ public class InvoiceBeanTest extends SuperTest<InvoiceBean> {
 	
 	@Override
 	public void setUp() {
-		dao = new InvoiceBeanDAO();
+		dao = DAOFactory.getInstance().getInvoiceBeanDAO();
 	}
 
 	public BinaryFile createBinaryFile(String fileName, String fileType) {
@@ -59,13 +58,13 @@ public class InvoiceBeanTest extends SuperTest<InvoiceBean> {
 		String id = ib.getId();
 		ib = null;
 		
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		InvoiceBean ibExample = new InvoiceBean();
 		ibExample.setId(id);
 		List<InvoiceBean> l = dao.findByExample(ibExample, false);
 		
 		assertTrue(l.size() > 0);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 
 	}
 
@@ -74,15 +73,15 @@ public class InvoiceBeanTest extends SuperTest<InvoiceBean> {
 		InvoiceBean ib = createInvoice();
 		String id = ib.getId();
 		logger.debug(">>>1ID is " + id );
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		ib.setAmount(1000D);
 		ib.setFile(null);
 		dao.save(ib);
 		logger.debug(">>>2ID is " + id);
 		logger.debug("Value is " + ib.getAmount());
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 
-		ib = dao.findByPrimaryKey(InvoiceBean.class, id);		
+		ib = dao.findByPrimaryKey(id);		
 		logger.debug(ib);
 		assertTrue(1000D == ib.getAmount());
 	}
@@ -93,12 +92,12 @@ public class InvoiceBeanTest extends SuperTest<InvoiceBean> {
 		String id = ib.getId();
 		BinaryFile bf = ib.getFile();
 		Long bfId = bf.getId();
-		HibernateUtil.beginTransaction();				
+		dao.beginTransaction();				
 		dao.delete(ib);
-		ib = dao.findByPrimaryKey(InvoiceBean.class, id);
-		BinaryFileDAO bfDAO = new BinaryFileDAO();
+		ib = dao.findByPrimaryKey(id);
+		IBinaryFileDAO bfDAO = DAOFactory.getInstance().getBinaryFileDAO();
 		bf = bfDAO.findByPrimaryKey(bfId);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		assertTrue(ib == null);
 		assertTrue(bf == null); 
 	}

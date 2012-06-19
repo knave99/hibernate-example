@@ -3,12 +3,10 @@ package com.fancythinking.reg.hibernate_example.dal;
 import java.util.Calendar;
 import java.util.List;
 
-import org.hibernate.Session;
-
 import com.fancythinking.reg.hibernate_example.SuperTest;
 import com.fancythinking.reg.hibernate_example.bean.UserBean;
 
-public class TestUserBeanDAO extends SuperTest<UserBean> {
+public class TestUserBeanDAO extends SuperTest<UserBean, Long> {
 
 	
 	
@@ -18,12 +16,12 @@ public class TestUserBeanDAO extends SuperTest<UserBean> {
 	}
 	
 	public void setUp() {
-		dao = new UserBeanDAO();
+		dao = DAOFactory.getInstance().getUserBeanDAO();
 	}
 	
 	protected UserBean createUserBean() {
 		UserBean user = new UserBean();
-		Session session = HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		user.setUserName("Reg " + Math.random());
 		user.setFirstName("FN: Reg " + Math.random());
 		user.setLastName("LN: Stuart " + Math.random());
@@ -39,21 +37,21 @@ public class TestUserBeanDAO extends SuperTest<UserBean> {
 		user.setMyCal(cal);		
 		user.setDateOfBirth(cal.getTime());
 		user.setFondestMemory("This is my fondest memory!  blah blah blah!");
-		session.saveOrUpdate(user);
-		HibernateUtil.commitTransaction(session);
+		dao.save(user);
+		dao.commitTransaction();
 		return user;
 	}
 
 	public void testFindByPrimaryKey() {
 		UserBean b1 = createUserBean();
 		long id = b1.getId();
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		logger.debug(">>>created: " + b1.toString());
 		
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		UserBeanDAO dao = new UserBeanDAO();
 		UserBean ub = dao.findByPrimaryKey(id);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		logger.debug(">>>retrieved " + ub.toString());
 		assertTrue( ub.getFirstName().equals(b1.getFirstName()) );
 
@@ -68,18 +66,18 @@ public class TestUserBeanDAO extends SuperTest<UserBean> {
 		UserBean ub1 = new UserBean();
 		ub1.setUserName(b1.getUserName());
 		
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		List<UserBean> list = dao.findByExample(ub1, true);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		logger.debug("list size is " + list.size());
 		assertTrue( list.size() == 1);
 	}
 	
 	public void testFindAll() {
 		logger.debug("Testing findAll()");
-		HibernateUtil.beginTransaction();
-		List<UserBean> ubList = new UserBeanDAO().findAll();
-		HibernateUtil.commitTransaction();
+		dao.beginTransaction();
+		List<UserBean> ubList = dao.findAll(new UserBean());
+		dao.commitTransaction();
 		for ( UserBean ub : ubList ) {
 			logger.debug(ub.toString());
 		}

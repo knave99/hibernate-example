@@ -1,18 +1,18 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.BinaryFileDAO;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
 
-public class BinaryFileTest extends SuperTest<BinaryFile> {
+public class BinaryFileTest extends SuperTest<BinaryFile, Long> {
 
 	public BinaryFileTest(String testName) {
 		super(testName);
 	}
+	
 
 	@Override
 	public void setUp() {
-		dao = new BinaryFileDAO();
+		dao = DAOFactory.getInstance().getBinaryFileDAO();
 	}
 
 	public BinaryFile createBinaryFile() {
@@ -34,12 +34,12 @@ public class BinaryFileTest extends SuperTest<BinaryFile> {
 		BinaryFile f = createBinaryFile();
 		Long id = f.getId();
 		f = null;
-		HibernateUtil.beginTransaction();
-		f = dao.findByPrimaryKey(id);
+		dao.beginTransaction();
+		f = findBean(id);
 		assertTrue(f.getId() != null);
 		assertTrue(f.getBytes() != null);
 		assertTrue(f.getBytes().length > 0);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		BinaryFileUtil.writeFile("c:/work/Git_out.pdf", f.getBytes());
 	}
 
@@ -47,29 +47,29 @@ public class BinaryFileTest extends SuperTest<BinaryFile> {
 	public void testUpdate() {
 		BinaryFile f = createBinaryFile();
 		
-		HibernateUtil.beginTransaction();				
+		dao.beginTransaction();				
 		f.setName("README");
 		f.setType("txt");
 		f.setBytes(BinaryFileUtil.read(f.getFullPath()));
 		dao.save(f);		
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		Long id = f.getId();
 		f = null;
 		
-		HibernateUtil.beginTransaction();
-		f = dao.findByPrimaryKey(id);
+		dao.beginTransaction();
+		f = findBean(id);
 		assertTrue("README".equals(f.getName()));
 		BinaryFileUtil.writeFile("c:/work/read_out.txt", f.getBytes());
-		HibernateUtil.commitTransaction();		
+		dao.commitTransaction();		
 	}
 
 	@Override
 	public void testDestroy() {
 		BinaryFile f = createBinaryFile();
-		HibernateUtil.beginTransaction();		
+		dao.beginTransaction();		
 		dao.delete(f);
-		f = dao.findByPrimaryKey(f.getId());
-		HibernateUtil.commitTransaction();
+		f = findBean(f.getId());
+		dao.commitTransaction();
 		assertTrue(f == null);
 
 	}

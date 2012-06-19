@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fancythinking.reg.hibernate_example.SuperTest;
-import com.fancythinking.reg.hibernate_example.dal.CourseDAO;
-import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
+import com.fancythinking.reg.hibernate_example.dal.DAOFactory;
 
-public class CourseTest extends SuperTest<Course> {
+public class CourseTest extends SuperTest<Course, Long> {
 
 	public CourseTest(String testName) {
 		super(testName);
@@ -15,7 +14,7 @@ public class CourseTest extends SuperTest<Course> {
 
 	@Override
 	public void setUp() {
-		dao = new CourseDAO();
+		dao = DAOFactory.getInstance().getCourseDAO();
 	}
 
 	public Course createCourse() {
@@ -43,7 +42,9 @@ public class CourseTest extends SuperTest<Course> {
 		Course c1 = createCourse();
 		Long id = c1.getCourseId();
 		c1 = null;
-		c1 = findBean(id);		
+		dao.beginTransaction();
+		c1 = findBean(id);
+		dao.commitTransaction();
 		assertTrue(c1.getCourseId() != null);
 		assertTrue(c1.getStudentList().get(0).getId() != null);
 		assertTrue(c1.getStudentList().get(1).getId() != null);
@@ -55,14 +56,14 @@ public class CourseTest extends SuperTest<Course> {
 		String first = "Bob";
 		Course c1 = createCourse();
 		
-		HibernateUtil.beginTransaction();
+		dao.beginTransaction();
 		Long id = c1.getCourseId();
 		c1.setName(chemistry);
 		c1.getStudentList().get(0).setFirstName(first);
 		dao.save(c1);
 		c1 = null;
 		c1 = dao.findByPrimaryKey(id);
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		
 		assertTrue(chemistry.equals(c1.getName()));
 		assertTrue(first.equals(c1.getStudentList().get(0).getFirstName()));
@@ -71,10 +72,10 @@ public class CourseTest extends SuperTest<Course> {
 	@Override
 	public void testDestroy() {
 		Course c1 = createCourse();
-		HibernateUtil.beginTransaction();		
+		dao.beginTransaction();		
 		dao.delete(c1);
 		c1 = dao.findByPrimaryKey(c1.getCourseId());
-		HibernateUtil.commitTransaction();
+		dao.commitTransaction();
 		
 		assertTrue(c1 == null);
 	}
