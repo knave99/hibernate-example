@@ -23,6 +23,7 @@ public class TestCarBean extends SuperTest<CarBean, Long> {
 		List<NameX> waitingList =  new ArrayList<NameX>();
 		waitingList.add(new NameX("Stuart", "Reg"));
 		waitingList.add(new NameX("Stuart", "Jayne"));
+		
 		cb.setWaitingList(waitingList);
 		create(cb);
 		Long id = cb.getId();
@@ -31,10 +32,10 @@ public class TestCarBean extends SuperTest<CarBean, Long> {
 		cb = null;
 		dao.beginTransaction();
 		cb = findBean(id);
-		
-		dao.commitTransaction();
 		assertTrue( cb != null );
-		assertTrue( cb.getWaitingList().isEmpty() != true );
+		assertTrue( cb.getWaitingList().isEmpty() != true );		
+		dao.commitTransaction();
+
 		
 		logger.debug(cb.toString());				
 	}

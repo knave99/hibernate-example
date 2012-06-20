@@ -33,16 +33,7 @@ public class CarBean {
 	private Long id;
 	private Date modelYear;
 	private String modelName;
-	private String owner;
-	
-/*
-	@CollectionOfElements (targetElement=com.fancythinking.reg.hibernate_example.bean.NameX.class)
-	@JoinTable	(	name="tbl_join", 
-					joinColumns = @JoinColumn(name= "fk_car_bean")
-				)
-*/
-
-	
+	private String owner;	
 	private List<NameX> waitingList;
 	
 	
@@ -77,12 +68,6 @@ public class CarBean {
 		this.modelName = modelName;
 	}
 
-	/*
-	@Embedded
-	@OneToMany (mappedBy="id",
-			targetEntity=com.fancythinking.reg.hibernate_example.bean.NameX.class
-	)
-	*/
 	@OneToMany	(	mappedBy="myCar",
 					targetEntity=NameX.class,
 					fetch=FetchType.EAGER,

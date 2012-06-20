@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table	(name="tbl_nameX")
+@Table	(name="tbl_name")
 public class NameX implements Serializable {
 	/**
 	 * 
