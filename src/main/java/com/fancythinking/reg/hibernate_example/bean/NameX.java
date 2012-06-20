@@ -42,8 +42,13 @@ public class NameX implements Serializable {
 	}
 	public NameX() {}
 	public NameX(String lastName, String firstName) {
+		this(lastName, firstName, null);
+	}
+	
+	public NameX(String lastName, String firstName, CarBean myCar) {
 		surname = lastName;
 		this.firstName = firstName;
+		this.myCar = myCar;
 	}
 	
 	public String getFirstName() {

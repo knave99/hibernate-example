@@ -90,7 +90,7 @@ public class CarBean {
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("ID:" + getId() + " Model: " + getModelName() + ":" + getModelYear() + " owned by " + getOwner() + "\nWaiting List\n");
+		sb.append("CAR BEAN ID:" + getId() + " Model: " + getModelName() + ":" + getModelYear() + " owned by " + getOwner() + "\nWaiting List\n");
 		if ( waitingList != null ) {
 			for ( NameX n : waitingList ) {
 				sb.append(n.toString() +"\n");

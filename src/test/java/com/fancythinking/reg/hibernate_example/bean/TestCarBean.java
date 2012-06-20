@@ -21,23 +21,21 @@ public class TestCarBean extends SuperTest<CarBean, Long> {
 	public void testCreate() {
 		CarBean cb = new CarBean(new Date(), "Punto Grande", "Reg");
 		List<NameX> waitingList =  new ArrayList<NameX>();
-		waitingList.add(new NameX("Stuart", "Reg"));
-		waitingList.add(new NameX("Stuart", "Jayne"));
-		
+		waitingList.add(new NameX("Stuart", "Reg", cb));
+		waitingList.add(new NameX("Stuart", "Jayne", cb));
+		cb.setOwner("Reg");
 		cb.setWaitingList(waitingList);
 		create(cb);
 		Long id = cb.getId();
 		assertTrue(id != null);
-		
+		logger.debug(cb.toString());
 		cb = null;
 		dao.beginTransaction();
 		cb = findBean(id);
 		assertTrue( cb != null );
+		logger.debug(cb.toString());	
 		assertTrue( cb.getWaitingList().isEmpty() != true );		
-		dao.commitTransaction();
-
-		
-		logger.debug(cb.toString());				
+		dao.commitTransaction();					
 	}
 	
 	public void testDestroy() {
