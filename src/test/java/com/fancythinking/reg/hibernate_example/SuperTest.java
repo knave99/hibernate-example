@@ -1,6 +1,7 @@
 package com.fancythinking.reg.hibernate_example;
 
 
+
 import java.io.Serializable;
 
 import junit.framework.TestCase;
@@ -20,6 +21,7 @@ import com.fancythinking.reg.hibernate_example.dal.IDAO;
 public abstract class SuperTest<T, ID extends Serializable> extends TestCase {
 	
 	static {
+
 		HibernateUtil.setBeanList( new Class<?>[] { 
 				UserBean.class, 
 				CarBean.class, 
@@ -31,6 +33,7 @@ public abstract class SuperTest<T, ID extends Serializable> extends TestCase {
 		});
 	}
 	
+
 	protected IDAO<T, ID> dao;
 	protected Logger logger = Logger.getLogger(getClass());
 	
@@ -38,6 +41,7 @@ public abstract class SuperTest<T, ID extends Serializable> extends TestCase {
 		super(testName);		
 	}
 	
+
 	public abstract void setUp();
 	
 	public void create(T cb) {		
@@ -56,9 +60,5 @@ public abstract class SuperTest<T, ID extends Serializable> extends TestCase {
 	public abstract void testUpdate();
 	
 	public abstract void testDestroy();
-	
-	
-	
-
 	
 }

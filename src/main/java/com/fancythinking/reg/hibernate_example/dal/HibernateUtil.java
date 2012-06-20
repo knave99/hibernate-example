@@ -6,6 +6,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 
+
 import com.fancythinking.reg.hibernate_example.bean.BinaryFile;
 import com.fancythinking.reg.hibernate_example.bean.CarBean;
 import com.fancythinking.reg.hibernate_example.bean.Course;
