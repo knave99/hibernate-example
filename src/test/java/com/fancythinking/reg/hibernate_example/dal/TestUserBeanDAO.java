@@ -85,19 +85,17 @@ public class TestUserBeanDAO extends SuperTest<UserBean, Long> {
 
 	@Override
 	public void testCreate() {
-		// TODO Auto-generated method stub
+
 		
 	}
 
 	@Override
 	public void testUpdate() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void testDestroy() {
-		// TODO Auto-generated method stub
 		
 	}
 

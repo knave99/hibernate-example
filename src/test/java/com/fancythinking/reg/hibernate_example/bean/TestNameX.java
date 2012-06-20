@@ -7,7 +7,6 @@ public class TestNameX extends SuperTest<NameX, Long> {
 	
 	public TestNameX(String testName) {
 		super(testName);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void setUp() {
