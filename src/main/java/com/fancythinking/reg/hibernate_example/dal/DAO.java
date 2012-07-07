@@ -8,6 +8,9 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 import org.hibernate.criterion.MatchMode;
 
+import com.cloudshaped.generated.Userbean;
+import com.fancythinking.reg.hibernate_example.bean.UserBean;
+
 public abstract class DAO<T> implements IDAO<T> {
 	
 	
@@ -61,4 +64,5 @@ public abstract class DAO<T> implements IDAO<T> {
 		return  list;
 		
 	}
+
 }
