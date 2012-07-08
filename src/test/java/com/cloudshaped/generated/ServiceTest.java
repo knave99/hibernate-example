@@ -9,9 +9,9 @@ import org.apache.log4j.Logger;
 
 import com.fancythinking.reg.hibernate_example.dal.HibernateUtil;
 
-public class ProductTest extends TestCase {
+public class ServiceTest extends TestCase {
 
-	Logger logger = Logger.getLogger(ProductTest.class);
+	Logger logger = Logger.getLogger(ServiceTest.class);
 
 	static {  		
 		HibernateUtil.setBeanList( new Class<?>[] { Product.class, Channel.class, Service.class, Productservice.class });
@@ -42,18 +42,5 @@ public class ProductTest extends TestCase {
 	}
 
 
-	
-
-
-	
-	ChannelDAO cd = new ChannelDAO();
-	public void testChannel() {
-
-		HibernateUtil.beginTransaction();
-		Channel c = cd.findByPrimaryKey(1L);
-		logger.debug("name is " + c.getName());
-		assertTrue(c.getName().trim().equalsIgnoreCase("BBC1"));
-		HibernateUtil.commitTransaction();
-	}
 	
 }
