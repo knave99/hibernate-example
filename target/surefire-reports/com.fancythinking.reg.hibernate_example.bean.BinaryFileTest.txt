@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------
+Test set: com.fancythinking.reg.hibernate_example.bean.BinaryFileTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 1.477 sec <<< FAILURE!
+testDestroy(com.fancythinking.reg.hibernate_example.bean.BinaryFileTest)  Time elapsed: 0.015 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testDestroy(BinaryFileTest.java:82)
+
+testCreate(com.fancythinking.reg.hibernate_example.bean.BinaryFileTest)  Time elapsed: 1.383 sec  <<< ERROR!
+org.hibernate.MappingException: Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile
+	at org.hibernate.impl.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:597)
+	at org.hibernate.impl.SessionImpl.getEntityPersister(SessionImpl.java:1339)
+	at org.hibernate.engine.ForeignKeys.isTransient(ForeignKeys.java:180)
+	at org.hibernate.event.def.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:512)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:80)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:70)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:508)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:500)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:301)
+	at $Proxy20.saveOrUpdate(Unknown Source)
+	at com.fancythinking.reg.hibernate_example.dal.DAO.save(DAO.java:24)
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.createBinaryFile(BinaryFileTest.java:35)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testCreate(BinaryFileTest.java:42)
+
+testUpdate(com.fancythinking.reg.hibernate_example.bean.BinaryFileTest)  Time elapsed: 0.016 sec  <<< ERROR!
+org.hibernate.MappingException: Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile
+	at org.hibernate.impl.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:597)
+	at org.hibernate.impl.SessionImpl.getEntityPersister(SessionImpl.java:1339)
+	at org.hibernate.engine.ForeignKeys.isTransient(ForeignKeys.java:180)
+	at org.hibernate.event.def.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:512)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:80)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:70)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:508)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:500)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:301)
+	at $Proxy20.saveOrUpdate(Unknown Source)
+	at com.fancythinking.reg.hibernate_example.dal.DAO.save(DAO.java:24)
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.createBinaryFile(BinaryFileTest.java:35)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testUpdate(BinaryFileTest.java:53)
+

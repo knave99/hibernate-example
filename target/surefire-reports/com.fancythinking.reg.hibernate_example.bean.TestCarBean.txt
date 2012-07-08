@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.fancythinking.reg.hibernate_example.bean.TestCarBean
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.28 sec <<< FAILURE!
+testCreate(com.fancythinking.reg.hibernate_example.bean.TestCarBean)  Time elapsed: 0.065 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.fancythinking.reg.hibernate_example.bean.TestCarBean.testCreate(TestCarBean.java:36)
+

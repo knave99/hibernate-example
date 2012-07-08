@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="0.28" errors="0" skipped="0" tests="3" name="com.fancythinking.reg.hibernate_example.bean.TestCarBean">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin"/>
+    <property name="java.vm.version" value="23.0-b21"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\Work\git_repository\projects\hibernate-example"/>
+    <property name="java.runtime.version" value="1.7.0_04-b22"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="F:\Work\git_repository\projects\hibernate-example"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\Reg\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem\;f:\OpenSSL-Win32\bin;C:\Program Files\Java\jdk1.7.0_04\bin;F:\Programming\springsource\apache-maven-3.0.3/bin;."/>
+    <property name="surefire.test.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Reg"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Reg"/>
+    <property name="java.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_04\jre"/>
+    <property name="sun.java.command" value="F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire393914404912789486tmp F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire5988290987147922089tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_04"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="C:\Users\Reg\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.145" classname="com.fancythinking.reg.hibernate_example.bean.TestCarBean" name="testDestroy"/>
+  <testcase time="0.065" classname="com.fancythinking.reg.hibernate_example.bean.TestCarBean" name="testCreate">
+    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.fancythinking.reg.hibernate_example.bean.TestCarBean.testCreate(TestCarBean.java:36)
+</failure>
+    <system-out>DEBUG [main] (SessionImpl.java:221) - opened session at timestamp: 5495387872595968
+DEBUG [main] (ThreadLocalSessionContext.java:290) - allowing method [beginTransaction] in non-transacted context
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [beginTransaction] to proceed to real session
+DEBUG [main] (JDBCTransaction.java:54) - begin
+DEBUG [main] (ConnectionManager.java:421) - opening JDBC connection
+DEBUG [main] (DriverManagerConnectionProvider.java:93) - total checked-out connections: 0
+DEBUG [main] (DriverManagerConnectionProvider.java:99) - using pooled JDBC connection, pool size: 0
+DEBUG [main] (JDBCTransaction.java:59) - current autocommit status: false
+DEBUG [main] (JDBCContext.java:214) - after transaction begin
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [saveOrUpdate] to proceed to real session
+DEBUG [main] (AbstractSaveEventListener.java:514) - transient instance of: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:158) - saving transient instance
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - select nextval (&apos;hibernate_sequence&apos;)
+Hibernate: select nextval (&apos;hibernate_sequence&apos;)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (SequenceGenerator.java:82) - Sequence identifier generated: 16
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (AbstractSaveEventListener.java:112) - generated identifier: 16, using strategy: org.hibernate.id.SequenceGenerator
+DEBUG [main] (AbstractSaveEventListener.java:153) - saving [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (Cascade.java:116) - processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Cascade.java:151) - done processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (WrapVisitor.java:87) - Wrapped collection in role: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (Cascade.java:116) - processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Cascade.java:292) - cascade ACTION_SAVE_UPDATE for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (CascadingAction.java:216) - cascading to saveOrUpdate: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (AbstractSaveEventListener.java:514) - transient instance of: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:158) - saving transient instance
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - select nextval (&apos;hibernate_sequence&apos;)
+Hibernate: select nextval (&apos;hibernate_sequence&apos;)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (SequenceGenerator.java:82) - Sequence identifier generated: 17
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (AbstractSaveEventListener.java:112) - generated identifier: 17, using strategy: org.hibernate.id.SequenceGenerator
+DEBUG [main] (AbstractSaveEventListener.java:153) - saving [com.fancythinking.reg.hibernate_example.bean.NameX#17]
+DEBUG [main] (CascadingAction.java:216) - cascading to saveOrUpdate: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (AbstractSaveEventListener.java:514) - transient instance of: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:158) - saving transient instance
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - select nextval (&apos;hibernate_sequence&apos;)
+Hibernate: select nextval (&apos;hibernate_sequence&apos;)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (SequenceGenerator.java:82) - Sequence identifier generated: 18
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (AbstractSaveEventListener.java:112) - generated identifier: 18, using strategy: org.hibernate.id.SequenceGenerator
+DEBUG [main] (AbstractSaveEventListener.java:153) - saving [com.fancythinking.reg.hibernate_example.bean.NameX#18]
+DEBUG [main] (Cascade.java:307) - done cascade ACTION_SAVE_UPDATE for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (Cascade.java:151) - done processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [getTransaction] to proceed to real session
+DEBUG [main] (JDBCTransaction.java:103) - commit
+DEBUG [main] (SessionImpl.java:338) - automatically flushing session
+DEBUG [main] (AbstractFlushingEventListener.java:58) - flushing session
+DEBUG [main] (AbstractFlushingEventListener.java:111) - processing flush-time cascades
+DEBUG [main] (Cascade.java:116) - processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Cascade.java:292) - cascade ACTION_SAVE_UPDATE for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (CascadingAction.java:216) - cascading to saveOrUpdate: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (AbstractSaveEventListener.java:488) - persistent instance of: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:99) - ignoring persistent instance
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:136) - object already associated with session: [com.fancythinking.reg.hibernate_example.bean.NameX#17]
+DEBUG [main] (CascadingAction.java:216) - cascading to saveOrUpdate: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (AbstractSaveEventListener.java:488) - persistent instance of: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:99) - ignoring persistent instance
+DEBUG [main] (DefaultSaveOrUpdateEventListener.java:136) - object already associated with session: [com.fancythinking.reg.hibernate_example.bean.NameX#18]
+DEBUG [main] (Cascade.java:307) - done cascade ACTION_SAVE_UPDATE for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (Cascade.java:151) - done processing cascade ACTION_SAVE_UPDATE for: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (AbstractFlushingEventListener.java:154) - dirty checking collections
+DEBUG [main] (AbstractFlushingEventListener.java:171) - Flushing entities and processing referenced collections
+DEBUG [main] (Collections.java:176) - Collection found: [com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16], was: [&lt;unreferenced&gt;] (initialized)
+DEBUG [main] (AbstractFlushingEventListener.java:210) - Processing unreferenced collections
+DEBUG [main] (AbstractFlushingEventListener.java:224) - Scheduling collection removes/(re)creates/updates
+DEBUG [main] (AbstractFlushingEventListener.java:85) - Flushed: 3 insertions, 0 updates, 0 deletions to 3 objects
+DEBUG [main] (AbstractFlushingEventListener.java:91) - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+DEBUG [main] (Printer.java:83) - listing entities:
+DEBUG [main] (Printer.java:90) - com.fancythinking.reg.hibernate_example.bean.NameX{id=18, surname=Stuart, firstName=Jayne, myCar=null}
+DEBUG [main] (Printer.java:90) - com.fancythinking.reg.hibernate_example.bean.NameX{id=17, surname=Stuart, firstName=Reg, myCar=null}
+DEBUG [main] (Printer.java:90) - com.fancythinking.reg.hibernate_example.bean.CarBean{id=16, waitingList=[com.fancythinking.reg.hibernate_example.bean.NameX#17, com.fancythinking.reg.hibernate_example.bean.NameX#18], modelName=Punto Grande, modelYear=07 July 2012, owner=null}
+DEBUG [main] (AbstractFlushingEventListener.java:290) - executing flush
+DEBUG [main] (ConnectionManager.java:469) - registering flush begin
+DEBUG [main] (AbstractEntityPersister.java:2199) - Inserting entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - insert into tbl_car_bean (id) values (?)
+Hibernate: insert into tbl_car_bean (id) values (?)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (AbstractEntityPersister.java:1987) - Dehydrating entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (NullableType.java:133) - binding &apos;16&apos; to parameter: 1
+DEBUG [main] (AbstractEntityPersister.java:2199) - Inserting entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (BatchingBatcher.java:44) - Executing batch size: 1
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - insert into tbl_car_bean_model (modelName, modelYear, car_bean_fk) values (?, ?, ?)
+Hibernate: insert into tbl_car_bean_model (modelName, modelYear, car_bean_fk) values (?, ?, ?)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (AbstractEntityPersister.java:1987) - Dehydrating entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (NullableType.java:133) - binding &apos;Punto Grande&apos; to parameter: 1
+DEBUG [main] (NullableType.java:133) - binding &apos;07 July 2012&apos; to parameter: 2
+DEBUG [main] (NullableType.java:133) - binding &apos;16&apos; to parameter: 3
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (AbstractEntityPersister.java:2199) - Inserting entity: [com.fancythinking.reg.hibernate_example.bean.NameX#17]
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - insert into tbl_nameX (firstName, car_id, surname, id) values (?, ?, ?, ?)
+Hibernate: insert into tbl_nameX (firstName, car_id, surname, id) values (?, ?, ?, ?)
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (AbstractEntityPersister.java:1987) - Dehydrating entity: [com.fancythinking.reg.hibernate_example.bean.NameX#17]
+DEBUG [main] (NullableType.java:133) - binding &apos;Reg&apos; to parameter: 1
+DEBUG [main] (NullableType.java:126) - binding null to parameter: 2
+DEBUG [main] (NullableType.java:133) - binding &apos;Stuart&apos; to parameter: 3
+DEBUG [main] (NullableType.java:133) - binding &apos;17&apos; to parameter: 4
+DEBUG [main] (AbstractEntityPersister.java:2199) - Inserting entity: [com.fancythinking.reg.hibernate_example.bean.NameX#18]
+DEBUG [main] (AbstractBatcher.java:227) - reusing prepared statement
+DEBUG [main] (AbstractBatcher.java:424) - insert into tbl_nameX (firstName, car_id, surname, id) values (?, ?, ?, ?)
+Hibernate: insert into tbl_nameX (firstName, car_id, surname, id) values (?, ?, ?, ?)
+DEBUG [main] (AbstractEntityPersister.java:1987) - Dehydrating entity: [com.fancythinking.reg.hibernate_example.bean.NameX#18]
+DEBUG [main] (NullableType.java:133) - binding &apos;Jayne&apos; to parameter: 1
+DEBUG [main] (NullableType.java:126) - binding null to parameter: 2
+DEBUG [main] (NullableType.java:133) - binding &apos;Stuart&apos; to parameter: 3
+DEBUG [main] (NullableType.java:133) - binding &apos;18&apos; to parameter: 4
+DEBUG [main] (BatchingBatcher.java:44) - Executing batch size: 2
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (ConnectionManager.java:478) - registering flush end
+DEBUG [main] (AbstractFlushingEventListener.java:321) - post flush
+DEBUG [main] (JDBCContext.java:205) - before transaction completion
+DEBUG [main] (SessionImpl.java:394) - before transaction completion
+DEBUG [main] (JDBCTransaction.java:116) - committed JDBC Connection
+DEBUG [main] (JDBCContext.java:219) - after transaction completion
+DEBUG [main] (ConnectionManager.java:404) - aggressively releasing JDBC connection
+DEBUG [main] (ConnectionManager.java:441) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [main] (DriverManagerConnectionProvider.java:129) - returning connection to pool, pool size: 1
+DEBUG [main] (SessionImpl.java:423) - after transaction completion
+DEBUG [main] (SessionImpl.java:354) - automatically closing session
+DEBUG [main] (SessionImpl.java:274) - closing session
+DEBUG [main] (ConnectionManager.java:375) - connection already null in cleanup : no action
+DEBUG [main] (SessionImpl.java:221) - opened session at timestamp: 5495387872768000
+DEBUG [main] (ThreadLocalSessionContext.java:290) - allowing method [beginTransaction] in non-transacted context
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [beginTransaction] to proceed to real session
+DEBUG [main] (JDBCTransaction.java:54) - begin
+DEBUG [main] (ConnectionManager.java:421) - opening JDBC connection
+DEBUG [main] (DriverManagerConnectionProvider.java:93) - total checked-out connections: 0
+DEBUG [main] (DriverManagerConnectionProvider.java:99) - using pooled JDBC connection, pool size: 0
+DEBUG [main] (JDBCTransaction.java:59) - current autocommit status: false
+DEBUG [main] (JDBCContext.java:214) - after transaction begin
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [get] to proceed to real session
+DEBUG [main] (DefaultLoadEventListener.java:171) - loading entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (DefaultLoadEventListener.java:332) - attempting to resolve: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (DefaultLoadEventListener.java:369) - object not resolved in any cache: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (AbstractEntityPersister.java:3032) - Fetching entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (Loader.java:1856) - loading entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (AbstractBatcher.java:389) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [main] (AbstractBatcher.java:424) - select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+Hibernate: select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+DEBUG [main] (AbstractBatcher.java:507) - preparing statement
+DEBUG [main] (NullableType.java:133) - binding &apos;16&apos; to parameter: 1
+DEBUG [main] (AbstractBatcher.java:405) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [main] (Loader.java:694) - processing result set
+DEBUG [main] (Loader.java:699) - result set row: 0
+DEBUG [main] (NullableType.java:166) - returning null as column: id4_0_
+DEBUG [main] (Loader.java:1173) - result row: null, EntityKey[com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (Loader.java:1355) - Initializing object from ResultSet: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (AbstractEntityPersister.java:2026) - Hydrating entity: [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (NullableType.java:166) - returning null as column: owner3_1_
+DEBUG [main] (NullableType.java:172) - returning &apos;Punto Grande&apos; as column: modelName2_1_
+DEBUG [main] (NullableType.java:172) - returning &apos;07 July 2012&apos; as column: modelYear2_1_
+DEBUG [main] (NullableType.java:166) - returning null as column: car4_3_
+DEBUG [main] (Loader.java:1018) - result set contains (possibly empty) collection: [com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]
+DEBUG [main] (LoadContexts.java:167) - constructing collection load context for result set [org.postgresql.jdbc4.Jdbc4ResultSet@633b3b2e]
+DEBUG [main] (CollectionLoadContext.java:90) - starting attempt to find loading collection [[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]]
+DEBUG [main] (CollectionLoadContext.java:120) - instantiating new collection [key=16, rs=org.postgresql.jdbc4.Jdbc4ResultSet@633b3b2e]
+DEBUG [main] (Loader.java:721) - done processing result set (1 rows)
+DEBUG [main] (AbstractBatcher.java:412) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:397) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [main] (AbstractBatcher.java:556) - closing statement
+DEBUG [main] (Loader.java:851) - total objects hydrated: 1
+DEBUG [main] (TwoPhaseLoad.java:111) - resolving associations for [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (LoadContexts.java:269) - attempting to locate loading collection entry [CollectionKey[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]] in any result-set context
+DEBUG [main] (LoadContexts.java:277) - collection [CollectionKey[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]] located in load context
+DEBUG [main] (LoadContexts.java:187) - returning loading collection:[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]
+DEBUG [main] (TwoPhaseLoad.java:209) - done materializing entity [com.fancythinking.reg.hibernate_example.bean.CarBean#16]
+DEBUG [main] (LoadContexts.java:269) - attempting to locate loading collection entry [CollectionKey[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]] in any result-set context
+DEBUG [main] (LoadContexts.java:277) - collection [CollectionKey[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]] located in load context
+DEBUG [main] (CollectionLoadContext.java:186) - removing collection load entry [org.hibernate.engine.loading.LoadingCollectionEntry&lt;rs=org.postgresql.jdbc4.Jdbc4ResultSet@633b3b2e, coll=[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]&gt;@5b8633e]
+DEBUG [main] (CollectionLoadContext.java:217) - 1 collections were found in result set for role: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (CollectionLoadContext.java:232) - ending loading collection [org.hibernate.engine.loading.LoadingCollectionEntry&lt;rs=org.postgresql.jdbc4.Jdbc4ResultSet@633b3b2e, coll=[com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]&gt;@5b8633e]
+DEBUG [main] (CollectionLoadContext.java:263) - collection fully initialized: [com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList#16]
+DEBUG [main] (CollectionLoadContext.java:226) - 1 collections initialized for role: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (StatefulPersistenceContext.java:837) - initializing non-lazy collections
+DEBUG [main] (Loader.java:1887) - done entity load
+</system-out>
+  </testcase>
+  <testcase time="0.07" classname="com.fancythinking.reg.hibernate_example.bean.TestCarBean" name="testUpdate"/>
+</testsuite>

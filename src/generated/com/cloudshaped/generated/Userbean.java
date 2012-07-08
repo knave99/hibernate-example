@@ -1,6 +1,6 @@
 package com.cloudshaped.generated;
 
-// Generated 07-Jul-2012 08:44:37 by Hibernate Tools 3.4.0.CR1
+// Generated 08-Jul-2012 17:47:20 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import javax.persistence.Column;

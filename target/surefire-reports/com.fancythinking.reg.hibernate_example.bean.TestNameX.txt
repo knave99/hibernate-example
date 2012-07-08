@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.fancythinking.reg.hibernate_example.bean.TestNameX
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.02 sec <<< FAILURE!
+testDestroy(com.fancythinking.reg.hibernate_example.bean.TestNameX)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.TestNameX.testDestroy(TestNameX.java:36)
+
+testCreate(com.fancythinking.reg.hibernate_example.bean.TestNameX)  Time elapsed: 0.004 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.TestNameX.testCreate(TestNameX.java:28)
+
+testUpdate(com.fancythinking.reg.hibernate_example.bean.TestNameX)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.TestNameX.testUpdate(TestNameX.java:50)
+

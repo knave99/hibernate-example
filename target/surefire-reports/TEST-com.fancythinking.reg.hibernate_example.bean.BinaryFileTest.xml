@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="1.477" errors="2" skipped="0" tests="3" name="com.fancythinking.reg.hibernate_example.bean.BinaryFileTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin"/>
+    <property name="java.vm.version" value="23.0-b21"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\Work\git_repository\projects\hibernate-example"/>
+    <property name="java.runtime.version" value="1.7.0_04-b22"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="F:\Work\git_repository\projects\hibernate-example"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\Reg\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem\;f:\OpenSSL-Win32\bin;C:\Program Files\Java\jdk1.7.0_04\bin;F:\Programming\springsource\apache-maven-3.0.3/bin;."/>
+    <property name="surefire.test.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Reg"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Reg"/>
+    <property name="java.class.path" value="F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_04\jre"/>
+    <property name="sun.java.command" value="F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire393914404912789486tmp F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire5988290987147922089tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_04"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="C:\Users\Reg\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.015" classname="com.fancythinking.reg.hibernate_example.bean.BinaryFileTest" name="testDestroy">
+    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testDestroy(BinaryFileTest.java:82)
+</failure>
+    <system-out>@HL
+@HL-------------------------------------------------------
+@HL T E S T S
+@HL-------------------------------------------------------
+@SLRunning com.fancythinking.reg.hibernate_example.bean.BinaryFileTest
+</system-out>
+  </testcase>
+  <testcase time="1.383" classname="com.fancythinking.reg.hibernate_example.bean.BinaryFileTest" name="testCreate">
+    <error message="Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile" type="org.hibernate.MappingException">org.hibernate.MappingException: Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile
+	at org.hibernate.impl.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:597)
+	at org.hibernate.impl.SessionImpl.getEntityPersister(SessionImpl.java:1339)
+	at org.hibernate.engine.ForeignKeys.isTransient(ForeignKeys.java:180)
+	at org.hibernate.event.def.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:512)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:80)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:70)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:508)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:500)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:301)
+	at $Proxy20.saveOrUpdate(Unknown Source)
+	at com.fancythinking.reg.hibernate_example.dal.DAO.save(DAO.java:24)
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.createBinaryFile(BinaryFileTest.java:35)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testCreate(BinaryFileTest.java:42)
+</error>
+    <system-out>DEBUG [main] (BinaryFileUtil.java:18) - Reading in binary file named : F:/uploads/AllVenoxis.jpg
+DEBUG [main] (BinaryFileUtil.java:22) - File exists? true
+DEBUG [main] (BinaryFileUtil.java:24) - File size: 318053
+DEBUG [main] (BinaryFileUtil.java:44) - Num bytes read: 318053
+DEBUG [main] (BinaryFileUtil.java:46) - Closing input stream.
+ INFO [main] (Environment.java:514) - Hibernate 3.2.7
+ INFO [main] (Environment.java:547) - hibernate.properties not found
+ INFO [main] (Environment.java:681) - Bytecode provider name : cglib
+ INFO [main] (Environment.java:598) - using JDK 1.4 java.sql.Timestamp handling
+ INFO [main] (Configuration.java:1445) - configuring from resource: /hibernate.cfg.xml
+ INFO [main] (Configuration.java:1422) - Configuration resource: /hibernate.cfg.xml
+DEBUG [main] (DTDEntityResolver.java:38) - trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd]
+DEBUG [main] (DTDEntityResolver.java:40) - recognized hibernate namespace; attempting to resolve on classpath under org/hibernate/
+DEBUG [main] (DTDEntityResolver.java:50) - located [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd] in classpath
+DEBUG [main] (Configuration.java:1406) - dialect=org.hibernate.dialect.PostgreSQLDialect
+DEBUG [main] (Configuration.java:1406) - connection.driver_class=org.postgresql.Driver
+DEBUG [main] (Configuration.java:1406) - connection.url=jdbc:postgresql://localhost:5432/examscam
+DEBUG [main] (Configuration.java:1406) - connection.username=postgres
+DEBUG [main] (Configuration.java:1406) - connection.password=3Round1House4
+DEBUG [main] (Configuration.java:1406) - cache.provider_class=org.hibernate.cache.HashtableCacheProvider
+DEBUG [main] (Configuration.java:1406) - transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory
+DEBUG [main] (Configuration.java:1406) - current_session_context_class=thread
+DEBUG [main] (Configuration.java:1406) - hibernate.show_sql=true
+ INFO [main] (Configuration.java:1560) - Configured SessionFactory: null
+DEBUG [main] (Configuration.java:1561) - properties: {java.vendor=Oracle Corporation, localRepository=C:\Users\Reg\.m2\repository, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:postgresql://localhost:5432/examscam, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Windows 7, sun.boot.class.path=C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes, hibernate.current_session_context_class=thread, sun.desktop=windows, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_04-b22, hibernate.cache.provider_class=org.hibernate.cache.HashtableCacheProvider, user.name=Reg, connection.driver_class=org.postgresql.Driver, current_session_context_class=thread, user.language=en, sun.boot.library.path=C:\Program Files\Java\jdk1.7.0_04\jre\bin, dialect=org.hibernate.dialect.PostgreSQLDialect, java.version=1.7.0_04, user.timezone=, sun.arch.data.model=64, java.endorsed.dirs=C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, file.encoding.pkg=sun.io, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=51.0, user.country=GB, connection.url=jdbc:postgresql://localhost:5432/examscam, java.home=C:\Program Files\Java\jdk1.7.0_04\jre, java.vm.info=mixed mode, os.version=6.1, transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory, hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory, surefire.real.class.path=F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar, path.separator=;, connection.password=3Round1House4, java.vm.version=23.0-b21, hibernate.connection.password=3Round1House4, user.variant=, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, hibernate.connection.username=postgres, user.script=, user.home=C:\Users\Reg, java.specification.vendor=Oracle Corporation, java.library.path=C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem\;f:\OpenSSL-Win32\bin;C:\Program Files\Java\jdk1.7.0_04\bin;F:\Programming\springsource\apache-maven-3.0.3/bin;., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=org.postgresql.Driver, connection.username=postgres, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire393914404912789486tmp F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire5988290987147922089tmp, java.class.path=F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=Service Pack 1, surefire.test.class.path=F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;, java.io.tmpdir=C:\Users\Reg\AppData\Local\Temp\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=amd64, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.ext.dirs=C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=F:\Work\git_repository\projects\hibernate-example, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, basedir=F:\Work\git_repository\projects\hibernate-example, cache.provider_class=org.hibernate.cache.HashtableCacheProvider, file.encoding=Cp1252, java.specification.version=1.7, hibernate.show_sql=true}
+DEBUG [main] (Configuration.java:1304) - Preparing to build session factory with filters : {}
+DEBUG [main] (Configuration.java:1139) - processing extends queue
+DEBUG [main] (Configuration.java:1143) - processing collection mappings
+DEBUG [main] (CollectionSecondPass.java:41) - Second pass for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (CollectionSecondPass.java:57) - Mapped collection key: car_id, one-to-many: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (CollectionSecondPass.java:41) - Second pass for collection: com.fancythinking.reg.hibernate_example.bean.Course.studentList
+DEBUG [main] (CollectionSecondPass.java:57) - Mapped collection key: course_id, one-to-many: com.fancythinking.reg.hibernate_example.bean.Student
+DEBUG [main] (Configuration.java:1154) - processing native query and ResultSetMapping mappings
+DEBUG [main] (Configuration.java:1162) - processing association property references
+DEBUG [main] (Configuration.java:1184) - processing foreign key constraints
+DEBUG [main] (Configuration.java:1267) - resolving reference to class: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Configuration.java:1267) - resolving reference to class: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Configuration.java:1267) - resolving reference to class: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (Configuration.java:1267) - resolving reference to class: com.fancythinking.reg.hibernate_example.bean.Course
+ INFO [main] (DriverManagerConnectionProvider.java:41) - Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProvider.java:42) - Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProvider.java:45) - autocommit mode: false
+ INFO [main] (DriverManagerConnectionProvider.java:80) - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/examscam
+ INFO [main] (DriverManagerConnectionProvider.java:83) - connection properties: {user=postgres, password=3Round1House4}
+DEBUG [main] (DriverManagerConnectionProvider.java:93) - total checked-out connections: 0
+DEBUG [main] (DriverManagerConnectionProvider.java:109) - opening new JDBC connection
+DEBUG [main] (DriverManagerConnectionProvider.java:115) - created connection to: jdbc:postgresql://localhost:5432/examscam, Isolation Level: 2
+ INFO [main] (SettingsFactory.java:89) - RDBMS: PostgreSQL, version: 9.1.4
+ INFO [main] (SettingsFactory.java:90) - JDBC driver: PostgreSQL Native Driver, version: PostgreSQL 9.0 JDBC4 (build 801)
+DEBUG [main] (DriverManagerConnectionProvider.java:129) - returning connection to pool, pool size: 1
+ INFO [main] (Dialect.java:175) - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+ INFO [main] (TransactionFactoryFactory.java:34) - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+ INFO [main] (TransactionManagerLookupFactory.java:33) - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+ INFO [main] (SettingsFactory.java:143) - Automatic flush during beforeCompletion(): disabled
+ INFO [main] (SettingsFactory.java:147) - Automatic session close at end of transaction: disabled
+ INFO [main] (SettingsFactory.java:154) - JDBC batch size: 15
+ INFO [main] (SettingsFactory.java:157) - JDBC batch updates for versioned data: disabled
+ INFO [main] (SettingsFactory.java:162) - Scrollable result sets: enabled
+DEBUG [main] (SettingsFactory.java:166) - Wrap result sets: disabled
+ INFO [main] (SettingsFactory.java:170) - JDBC3 getGeneratedKeys(): enabled
+ INFO [main] (SettingsFactory.java:178) - Connection release mode: auto
+ INFO [main] (SettingsFactory.java:205) - Default batch fetch size: 1
+ INFO [main] (SettingsFactory.java:209) - Generate SQL with comments: disabled
+ INFO [main] (SettingsFactory.java:213) - Order SQL updates by primary key: disabled
+ INFO [main] (SettingsFactory.java:217) - Order SQL inserts for batching: disabled
+ INFO [main] (SettingsFactory.java:386) - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+ INFO [main] (ASTQueryTranslatorFactory.java:24) - Using ASTQueryTranslatorFactory
+ INFO [main] (SettingsFactory.java:225) - Query language substitutions: {}
+ INFO [main] (SettingsFactory.java:230) - JPA-QL strict compliance: disabled
+ INFO [main] (SettingsFactory.java:235) - Second-level cache: enabled
+ INFO [main] (SettingsFactory.java:239) - Query cache: disabled
+ INFO [main] (SettingsFactory.java:373) - Cache provider: org.hibernate.cache.HashtableCacheProvider
+ INFO [main] (SettingsFactory.java:254) - Optimize cache for minimal puts: disabled
+ INFO [main] (SettingsFactory.java:263) - Structured second-level cache entries: disabled
+DEBUG [main] (SQLExceptionConverterFactory.java:52) - Using dialect defined converter
+ INFO [main] (SettingsFactory.java:283) - Echoing all SQL to stdout
+ INFO [main] (SettingsFactory.java:290) - Statistics: disabled
+ INFO [main] (SettingsFactory.java:294) - Deleted entity synthetic identifier rollback: disabled
+ INFO [main] (SettingsFactory.java:309) - Default entity-mode: pojo
+ INFO [main] (SettingsFactory.java:313) - Named query checking : enabled
+ INFO [main] (SessionFactoryImpl.java:166) - building session factory
+DEBUG [main] (SessionFactoryImpl.java:178) - Session factory constructed with filter configurations : {}
+DEBUG [main] (SessionFactoryImpl.java:182) - instantiating session factory with properties: {java.vendor=Oracle Corporation, localRepository=C:\Users\Reg\.m2\repository, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:postgresql://localhost:5432/examscam, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Windows 7, sun.boot.class.path=C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes, hibernate.current_session_context_class=thread, sun.desktop=windows, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_04-b22, hibernate.cache.provider_class=org.hibernate.cache.HashtableCacheProvider, user.name=Reg, connection.driver_class=org.postgresql.Driver, current_session_context_class=thread, user.language=en, sun.boot.library.path=C:\Program Files\Java\jdk1.7.0_04\jre\bin, dialect=org.hibernate.dialect.PostgreSQLDialect, java.version=1.7.0_04, user.timezone=, sun.arch.data.model=64, java.endorsed.dirs=C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, file.encoding.pkg=sun.io, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=51.0, user.country=GB, connection.url=jdbc:postgresql://localhost:5432/examscam, java.home=C:\Program Files\Java\jdk1.7.0_04\jre, java.vm.info=mixed mode, os.version=6.1, transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory, hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory, surefire.real.class.path=F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar, path.separator=;, connection.password=3Round1House4, java.vm.version=23.0-b21, hibernate.connection.password=3Round1House4, user.variant=, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, hibernate.connection.username=postgres, user.script=, user.home=C:\Users\Reg, java.specification.vendor=Oracle Corporation, java.library.path=C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem\;f:\OpenSSL-Win32\bin;C:\Program Files\Java\jdk1.7.0_04\bin;F:\Programming\springsource\apache-maven-3.0.3/bin;., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=org.postgresql.Driver, connection.username=postgres, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=F:\Work\git_repository\projects\hibernate-example\target\surefire\surefirebooter6706838456840390381.jar F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire393914404912789486tmp F:\Work\git_repository\projects\hibernate-example\target\surefire\surefire5988290987147922089tmp, java.class.path=F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=Service Pack 1, surefire.test.class.path=F:\Work\git_repository\projects\hibernate-example\target\test-classes;F:\Work\git_repository\projects\hibernate-example\target\classes;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-nop\1.6.5\slf4j-nop-1.6.5.jar;C:\Users\Reg\.m2\repository\org\slf4j\slf4j-api\1.6.5\slf4j-api-1.6.5.jar;C:\Users\Reg\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\Reg\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate\3.2.7.ga\hibernate-3.2.7.ga.jar;C:\Users\Reg\.m2\repository\net\sf\ehcache\ehcache\1.2.3\ehcache-1.2.3.jar;C:\Users\Reg\.m2\repository\javax\transaction\jta\1.0.1B\jta-1.0.1B.jar;C:\Users\Reg\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;C:\Users\Reg\.m2\repository\asm\asm-attrs\1.5.3\asm-attrs-1.5.3.jar;C:\Users\Reg\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Reg\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\Reg\.m2\repository\cglib\cglib\2.1_3\cglib-2.1_3.jar;C:\Users\Reg\.m2\repository\asm\asm\1.5.3\asm-1.5.3.jar;C:\Users\Reg\.m2\repository\commons-collections\commons-collections\2.1.1\commons-collections-2.1.1.jar;C:\Users\Reg\.m2\repository\postgres\postgressql\9.0-801\postgressql-9.0-801.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Users\Reg\.m2\repository\org\hibernate\hibernate-core\3.3.0.SP1\hibernate-core-3.3.0.SP1.jar;C:\Users\Reg\.m2\repository\javax\ejb\ejb-api\3.0\ejb-api-3.0.jar;, java.io.tmpdir=C:\Users\Reg\AppData\Local\Temp\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=amd64, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.ext.dirs=C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=F:\Work\git_repository\projects\hibernate-example, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, basedir=F:\Work\git_repository\projects\hibernate-example, cache.provider_class=org.hibernate.cache.HashtableCacheProvider, file.encoding=Cp1252, java.specification.version=1.7, hibernate.show_sql=true}
+DEBUG [main] (AbstractEntityPersister.java:2733) - Static SQL for entity: com.fancythinking.reg.hibernate_example.bean.Student
+DEBUG [main] (AbstractEntityPersister.java:2738) -  Version select: select id from tbl_student where id =?
+DEBUG [main] (AbstractEntityPersister.java:2741) -  Snapshot select: select student_.id, student_.course_id as course4_5_, student_.firstName as firstName5_, student_.lastName as lastName5_ from tbl_student student_ where student_.id=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 0: insert into tbl_student (course_id, firstName, lastName, id) values (?, ?, ?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 0: update tbl_student set course_id=?, firstName=?, lastName=? where id=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 0: delete from tbl_student where id=?
+DEBUG [main] (AbstractEntityPersister.java:2733) - Static SQL for entity: com.fancythinking.reg.hibernate_example.bean.CarBean
+DEBUG [main] (AbstractEntityPersister.java:2738) -  Version select: select id from tbl_car_bean where id =?
+DEBUG [main] (AbstractEntityPersister.java:2741) -  Snapshot select: select carbean_.id, carbean_1_.owner as owner3_, carbean_2_.modelName as modelName2_, carbean_2_.modelYear as modelYear2_ from tbl_car_bean carbean_ left outer join tbl_car_bean_owner carbean_1_ on carbean_.id=carbean_1_.car_bean_fk left outer join tbl_car_bean_model carbean_2_ on carbean_.id=carbean_2_.car_bean_fk where carbean_.id=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 0: insert into tbl_car_bean (id) values (?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 0: null
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 0: delete from tbl_car_bean where id=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 1: insert into tbl_car_bean_owner (owner, car_bean_fk) values (?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 1: update tbl_car_bean_owner set owner=? where car_bean_fk=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 1: delete from tbl_car_bean_owner where car_bean_fk=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 2: insert into tbl_car_bean_model (modelName, modelYear, car_bean_fk) values (?, ?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 2: update tbl_car_bean_model set modelName=?, modelYear=? where car_bean_fk=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 2: delete from tbl_car_bean_model where car_bean_fk=?
+DEBUG [main] (AbstractEntityPersister.java:2733) - Static SQL for entity: com.fancythinking.reg.hibernate_example.bean.NameX
+DEBUG [main] (AbstractEntityPersister.java:2738) -  Version select: select id from tbl_nameX where id =?
+DEBUG [main] (AbstractEntityPersister.java:2741) -  Snapshot select: select namex_.id, namex_.firstName as firstName4_, namex_.car_id as car4_4_, namex_.surname as surname4_ from tbl_nameX namex_ where namex_.id=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 0: insert into tbl_nameX (firstName, car_id, surname, id) values (?, ?, ?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 0: update tbl_nameX set firstName=?, car_id=?, surname=? where id=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 0: delete from tbl_nameX where id=?
+DEBUG [main] (AbstractEntityPersister.java:2733) - Static SQL for entity: com.fancythinking.reg.hibernate_example.bean.UserBean
+DEBUG [main] (AbstractEntityPersister.java:2738) -  Version select: select id from tbl_user where id =?
+DEBUG [main] (AbstractEntityPersister.java:2741) -  Snapshot select: select userbean_.id, userbean_.dateOfBirth as dateOfBi2_0_, userbean_.first_name as first3_0_, userbean_.fondestMemory as fondestM4_0_, userbean_.last_name as last5_0_, userbean_.myCal as myCal0_, userbean_.password as password0_, userbean_.login_name as login8_0_ from tbl_user userbean_ where userbean_.id=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 0: insert into tbl_user (dateOfBirth, first_name, fondestMemory, last_name, myCal, password, login_name, id) values (?, ?, ?, ?, ?, ?, ?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 0: update tbl_user set dateOfBirth=?, first_name=?, fondestMemory=?, last_name=?, myCal=?, password=?, login_name=? where id=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 0: delete from tbl_user where id=?
+DEBUG [main] (AbstractEntityPersister.java:2733) - Static SQL for entity: com.fancythinking.reg.hibernate_example.bean.Course
+DEBUG [main] (AbstractEntityPersister.java:2738) -  Version select: select courseId from tbl_course where courseId =?
+DEBUG [main] (AbstractEntityPersister.java:2741) -  Snapshot select: select course_.courseId, course_.name as name6_ from tbl_course course_ where course_.courseId=?
+DEBUG [main] (AbstractEntityPersister.java:2744) -  Insert 0: insert into tbl_course (name, courseId) values (?, ?)
+DEBUG [main] (AbstractEntityPersister.java:2745) -  Update 0: update tbl_course set name=? where courseId=?
+DEBUG [main] (AbstractEntityPersister.java:2746) -  Delete 0: delete from tbl_course where courseId=?
+DEBUG [main] (AbstractCollectionPersister.java:548) - Static SQL for collection: com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList
+DEBUG [main] (AbstractCollectionPersister.java:550) -  Row insert: update tbl_nameX set car_id=? where id=?
+DEBUG [main] (AbstractCollectionPersister.java:556) -  Row delete: update tbl_nameX set car_id=null where car_id=? and id=?
+DEBUG [main] (AbstractCollectionPersister.java:559) -  One-shot delete: update tbl_nameX set car_id=null where car_id=?
+DEBUG [main] (AbstractCollectionPersister.java:548) - Static SQL for collection: com.fancythinking.reg.hibernate_example.bean.Course.studentList
+DEBUG [main] (AbstractCollectionPersister.java:550) -  Row insert: update tbl_student set course_id=? where id=?
+DEBUG [main] (AbstractCollectionPersister.java:556) -  Row delete: update tbl_student set course_id=null where course_id=? and id=?
+DEBUG [main] (AbstractCollectionPersister.java:559) -  One-shot delete: update tbl_student set course_id=null where course_id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_0_, carbean0_1_.owner as owner3_0_, carbean0_2_.modelName as modelName2_0_, carbean0_2_.modelYear as modelYear2_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk where carbean0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_0_, carbean0_1_.owner as owner3_0_, carbean0_2_.modelName as modelName2_0_, carbean0_2_.modelYear as modelYear2_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk where carbean0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_0_, carbean0_1_.owner as owner3_0_, carbean0_2_.modelName as modelName2_0_, carbean0_2_.modelYear as modelYear2_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk where carbean0_.id=? for update
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_MERGE on entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_REFRESH on entity com.fancythinking.reg.hibernate_example.bean.CarBean: select carbean0_.id as id1_1_, carbean0_1_.owner as owner3_1_, carbean0_2_.modelName as modelName2_1_, carbean0_2_.modelYear as modelYear2_1_, waitinglis1_.car_id as car4_3_, waitinglis1_.id as id3_, waitinglis1_.id as id4_0_, waitinglis1_.firstName as firstName4_0_, waitinglis1_.car_id as car4_4_0_, waitinglis1_.surname as surname4_0_ from tbl_car_bean carbean0_ left outer join tbl_car_bean_owner carbean0_1_ on carbean0_.id=carbean0_1_.car_bean_fk left outer join tbl_car_bean_model carbean0_2_ on carbean0_.id=carbean0_2_.car_bean_fk left outer join tbl_nameX waitinglis1_ on carbean0_.id=waitinglis1_.car_id where carbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_1_, student0_.course_id as course4_5_1_, student0_.firstName as firstName5_1_, student0_.lastName as lastName5_1_, course1_.courseId as courseId6_0_, course1_.name as name6_0_ from tbl_student student0_ left outer join tbl_course course1_ on student0_.course_id=course1_.courseId where student0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_1_, student0_.course_id as course4_5_1_, student0_.firstName as firstName5_1_, student0_.lastName as lastName5_1_, course1_.courseId as courseId6_0_, course1_.name as name6_0_ from tbl_student student0_ left outer join tbl_course course1_ on student0_.course_id=course1_.courseId where student0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_0_, student0_.course_id as course4_5_0_, student0_.firstName as firstName5_0_, student0_.lastName as lastName5_0_ from tbl_student student0_ where student0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_0_, student0_.course_id as course4_5_0_, student0_.firstName as firstName5_0_, student0_.lastName as lastName5_0_ from tbl_student student0_ where student0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_0_, student0_.course_id as course4_5_0_, student0_.firstName as firstName5_0_, student0_.lastName as lastName5_0_ from tbl_student student0_ where student0_.id=? for update
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_MERGE on entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_0_, student0_.course_id as course4_5_0_, student0_.firstName as firstName5_0_, student0_.lastName as lastName5_0_ from tbl_student student0_ where student0_.id=?
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_REFRESH on entity com.fancythinking.reg.hibernate_example.bean.Student: select student0_.id as id5_0_, student0_.course_id as course4_5_0_, student0_.firstName as firstName5_0_, student0_.lastName as lastName5_0_ from tbl_student student0_ where student0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_1_, namex0_.firstName as firstName4_1_, namex0_.car_id as car4_4_1_, namex0_.surname as surname4_1_, carbean1_.id as id1_0_, carbean1_1_.owner as owner3_0_, carbean1_2_.modelName as modelName2_0_, carbean1_2_.modelYear as modelYear2_0_ from tbl_nameX namex0_ left outer join tbl_car_bean carbean1_ on namex0_.car_id=carbean1_.id left outer join tbl_car_bean_owner carbean1_1_ on carbean1_.id=carbean1_1_.car_bean_fk left outer join tbl_car_bean_model carbean1_2_ on carbean1_.id=carbean1_2_.car_bean_fk where namex0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_1_, namex0_.firstName as firstName4_1_, namex0_.car_id as car4_4_1_, namex0_.surname as surname4_1_, carbean1_.id as id1_0_, carbean1_1_.owner as owner3_0_, carbean1_2_.modelName as modelName2_0_, carbean1_2_.modelYear as modelYear2_0_ from tbl_nameX namex0_ left outer join tbl_car_bean carbean1_ on namex0_.car_id=carbean1_.id left outer join tbl_car_bean_owner carbean1_1_ on carbean1_.id=carbean1_1_.car_bean_fk left outer join tbl_car_bean_model carbean1_2_ on carbean1_.id=carbean1_2_.car_bean_fk where namex0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_0_, namex0_.firstName as firstName4_0_, namex0_.car_id as car4_4_0_, namex0_.surname as surname4_0_ from tbl_nameX namex0_ where namex0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_0_, namex0_.firstName as firstName4_0_, namex0_.car_id as car4_4_0_, namex0_.surname as surname4_0_ from tbl_nameX namex0_ where namex0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_0_, namex0_.firstName as firstName4_0_, namex0_.car_id as car4_4_0_, namex0_.surname as surname4_0_ from tbl_nameX namex0_ where namex0_.id=? for update
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_MERGE on entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_0_, namex0_.firstName as firstName4_0_, namex0_.car_id as car4_4_0_, namex0_.surname as surname4_0_ from tbl_nameX namex0_ where namex0_.id=?
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_REFRESH on entity com.fancythinking.reg.hibernate_example.bean.NameX: select namex0_.id as id4_0_, namex0_.firstName as firstName4_0_, namex0_.car_id as car4_4_0_, namex0_.surname as surname4_0_ from tbl_nameX namex0_ where namex0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=? for update
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_MERGE on entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=?
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_REFRESH on entity com.fancythinking.reg.hibernate_example.bean.UserBean: select userbean0_.id as id0_0_, userbean0_.dateOfBirth as dateOfBi2_0_0_, userbean0_.first_name as first3_0_0_, userbean0_.fondestMemory as fondestM4_0_0_, userbean0_.last_name as last5_0_0_, userbean0_.myCal as myCal0_0_, userbean0_.password as password0_0_, userbean0_.login_name as login8_0_0_ from tbl_user userbean0_ where userbean0_.id=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_1_, course0_.name as name6_1_, studentlis1_.course_id as course4_3_, studentlis1_.id as id3_, studentlis1_.id as id5_0_, studentlis1_.course_id as course4_5_0_, studentlis1_.firstName as firstName5_0_, studentlis1_.lastName as lastName5_0_ from tbl_course course0_ left outer join tbl_student studentlis1_ on course0_.courseId=studentlis1_.course_id where course0_.courseId=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_1_, course0_.name as name6_1_, studentlis1_.course_id as course4_3_, studentlis1_.id as id3_, studentlis1_.id as id5_0_, studentlis1_.course_id as course4_5_0_, studentlis1_.firstName as firstName5_0_, studentlis1_.lastName as lastName5_0_ from tbl_course course0_ left outer join tbl_student studentlis1_ on course0_.courseId=studentlis1_.course_id where course0_.courseId=?
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_0_, course0_.name as name6_0_ from tbl_course course0_ where course0_.courseId=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_0_, course0_.name as name6_0_ from tbl_course course0_ where course0_.courseId=? for update
+DEBUG [main] (EntityLoader.java:79) - Static select for entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_0_, course0_.name as name6_0_ from tbl_course course0_ where course0_.courseId=? for update
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_MERGE on entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_1_, course0_.name as name6_1_, studentlis1_.course_id as course4_3_, studentlis1_.id as id3_, studentlis1_.id as id5_0_, studentlis1_.course_id as course4_5_0_, studentlis1_.firstName as firstName5_0_, studentlis1_.lastName as lastName5_0_ from tbl_course course0_ left outer join tbl_student studentlis1_ on course0_.courseId=studentlis1_.course_id where course0_.courseId=?
+DEBUG [main] (CascadeEntityLoader.java:34) - Static select for action ACTION_REFRESH on entity com.fancythinking.reg.hibernate_example.bean.Course: select course0_.courseId as courseId6_1_, course0_.name as name6_1_, studentlis1_.course_id as course4_3_, studentlis1_.id as id3_, studentlis1_.id as id5_0_, studentlis1_.course_id as course4_5_0_, studentlis1_.firstName as firstName5_0_, studentlis1_.lastName as lastName5_0_ from tbl_course course0_ left outer join tbl_student studentlis1_ on course0_.courseId=studentlis1_.course_id where course0_.courseId=?
+DEBUG [main] (OneToManyLoader.java:64) - Static select for one-to-many com.fancythinking.reg.hibernate_example.bean.CarBean.waitingList: select waitinglis0_.car_id as car4_1_, waitinglis0_.id as id1_, waitinglis0_.id as id4_0_, waitinglis0_.firstName as firstName4_0_, waitinglis0_.car_id as car4_4_0_, waitinglis0_.surname as surname4_0_ from tbl_nameX waitinglis0_ where waitinglis0_.car_id=?
+DEBUG [main] (OneToManyLoader.java:64) - Static select for one-to-many com.fancythinking.reg.hibernate_example.bean.Course.studentList: select studentlis0_.course_id as course4_1_, studentlis0_.id as id1_, studentlis0_.id as id5_0_, studentlis0_.course_id as course4_5_0_, studentlis0_.firstName as firstName5_0_, studentlis0_.lastName as lastName5_0_ from tbl_student studentlis0_ where studentlis0_.course_id=?
+DEBUG [main] (SessionFactoryObjectFactory.java:39) - initializing class SessionFactoryObjectFactory
+DEBUG [main] (SessionFactoryObjectFactory.java:76) - registered: 4028818a38606b1c0138606b1d9f0000 (unnamed)
+ INFO [main] (SessionFactoryObjectFactory.java:82) - Not binding factory to JNDI, no JNDI name configured
+DEBUG [main] (SessionFactoryImpl.java:317) - instantiated session factory
+DEBUG [main] (SessionFactoryImpl.java:439) - Checking 1 named HQL queries
+DEBUG [main] (SessionFactoryImpl.java:447) - Checking named query: user.findByLoginName
+DEBUG [main] (QueryPlanCache.java:70) - unable to locate HQL query plan in cache; generating (from UserBean where userName = :name)
+DEBUG [main] (QueryTranslatorImpl.java:249) - parse() - HQL: from com.fancythinking.reg.hibernate_example.bean.UserBean where userName = :name
+DEBUG [main] (QueryTranslatorImpl.java:268) - --- HQL AST ---
+ \-[QUERY] &apos;query&apos;
+    +-[SELECT_FROM] &apos;SELECT_FROM&apos;
+    |  \-[FROM] &apos;from&apos;
+    |     \-[RANGE] &apos;RANGE&apos;
+    |        \-[DOT] &apos;.&apos;
+    |           +-[DOT] &apos;.&apos;
+    |           |  +-[DOT] &apos;.&apos;
+    |           |  |  +-[DOT] &apos;.&apos;
+    |           |  |  |  +-[DOT] &apos;.&apos;
+    |           |  |  |  |  +-[IDENT] &apos;com&apos;
+    |           |  |  |  |  \-[IDENT] &apos;fancythinking&apos;
+    |           |  |  |  \-[IDENT] &apos;reg&apos;
+    |           |  |  \-[IDENT] &apos;hibernate_example&apos;
+    |           |  \-[IDENT] &apos;bean&apos;
+    |           \-[IDENT] &apos;UserBean&apos;
+    \-[WHERE] &apos;where&apos;
+       \-[EQ] &apos;=&apos;
+          +-[IDENT] &apos;userName&apos;
+          \-[COLON] &apos;:&apos;
+             \-[IDENT] &apos;name&apos;
+
+DEBUG [main] (ErrorCounter.java:68) - throwQueryException() : no errors
+DEBUG [main] (HqlSqlWalker.java:179) - -&gt; statement (query [QUERY])
+DEBUG [main] (HqlSqlWalker.java:179) - ---&gt; selectStatement (query [QUERY])
+DEBUG [main] (HqlSqlWalker.java:179) - -----&gt; query (query [QUERY])
+DEBUG [main] (HqlSqlBaseWalker.java:111) - select &lt;&lt; begin [level=1, statement=select]
+DEBUG [main] (HqlSqlWalker.java:179) - -------&gt; fromClause (from [FROM])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------&gt; fromElementList (RANGE [RANGE])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------&gt; fromElement (RANGE [RANGE])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------&gt; path (. [DOT])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------&gt; path (. [DOT])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------&gt; path (. [DOT])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------------&gt; path (. [DOT])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------------&gt; path (. [DOT])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------------&gt; path (com [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------------------&gt; identifier (com [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------------- path
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------------&gt; identifier (fancythinking [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------------- path
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------------&gt; identifier (reg [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------------- path
+DEBUG [main] (HqlSqlWalker.java:179) - -------------------&gt; identifier (hibernate_example [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------- path
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------&gt; identifier (bean [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------- path
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------&gt; identifier (UserBean [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------- path
+DEBUG [main] (FromElement.java:111) - FromClause{level=1} :  com.fancythinking.reg.hibernate_example.bean.UserBean (no alias) -&gt; userbean0_
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------- fromElement
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------- fromElementList
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------- fromClause
+DEBUG [main] (HqlSqlWalker.java:179) - -------&gt; whereClause (where [WHERE])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------&gt; logicalExpr (= [EQ])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------&gt; comparisonExpr (= [EQ])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------&gt; exprOrSubquery (userName [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------&gt; expr (userName [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------&gt; addrExpr (userName [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------------&gt; identifier (userName [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:545) - attempting to resolve property [userName] as a non-qualified ref
+DEBUG [main] (FromReferenceNode.java:53) - Resolved :  {synthetic-alias} -&gt; {synthetic-alias}
+DEBUG [main] (FromElement.java:528) - handling property dereference [com.fancythinking.reg.hibernate_example.bean.UserBean (null) -&gt; userName (class)]
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------- addrExpr
+DEBUG [main] (DotNode.java:598) - getDataType() : userName -&gt; org.hibernate.type.StringType@49176e7
+DEBUG [main] (FromReferenceNode.java:53) - Resolved :  {synthetic-alias}.userName -&gt; userbean0_.login_name
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------- expr
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------- exprOrSubquery
+DEBUG [main] (HqlSqlWalker.java:179) - -------------&gt; exprOrSubquery (: [COLON])
+DEBUG [main] (HqlSqlWalker.java:179) - ---------------&gt; expr (: [COLON])
+DEBUG [main] (HqlSqlWalker.java:179) - -----------------&gt; parameter (: [COLON])
+DEBUG [main] (HqlSqlWalker.java:179) - -------------------&gt; identifier (name [IDENT])
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------------- identifier
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------------- parameter
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------------- expr
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------------- exprOrSubquery
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----------- comparisonExpr
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--------- logicalExpr
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;------- whereClause
+DEBUG [main] (HqlSqlBaseWalker.java:117) - select : finishing up [level=1, statement=select]
+DEBUG [main] (HqlSqlWalker.java:579) - processQuery() :  ( SELECT ( FromClause{level=1} tbl_user userbean0_ ) ( where ( = ( userbean0_.login_name {synthetic-alias} userName ) ? ) ) )
+DEBUG [main] (HqlSqlWalker.java:822) - Derived SELECT clause created.
+DEBUG [main] (JoinProcessor.java:153) - Using FROM fragment [tbl_user userbean0_]
+DEBUG [main] (HqlSqlBaseWalker.java:123) - select &gt;&gt; end [level=1, statement=select]
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;----- query
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;--- selectStatement
+DEBUG [main] (HqlSqlWalker.java:179) - &lt;- statement
+DEBUG [main] (QueryTranslatorImpl.java:235) - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (tbl_user)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;userbean0_.id as id0_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=tbl_user,tableAlias=userbean0_,origin=null,colums={,className=com.fancythinking.reg.hibernate_example.bean.UserBean}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;userbean0_.dateOfBirth as dateOfBi2_0_, userbean0_.first_name as first3_0_, userbean0_.fondestMemory as fondestM4_0_, userbean0_.last_name as last5_0_, userbean0_.myCal as myCal0_, userbean0_.password as password0_, userbean0_.login_name as login8_0_&apos;
+    +-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[userbean0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: &apos;tbl_user userbean0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=tbl_user,tableAlias=userbean0_,origin=null,colums={,className=com.fancythinking.reg.hibernate_example.bean.UserBean}}
+    \-[WHERE] SqlNode: &apos;where&apos;
+       \-[EQ] BinaryLogicOperatorNode: &apos;=&apos;
+          +-[DOT] DotNode: &apos;userbean0_.login_name&apos; {propertyName=userName,dereferenceType=ALL,propertyPath=userName,path={synthetic-alias}.userName,tableAlias=userbean0_,className=com.fancythinking.reg.hibernate_example.bean.UserBean,classAlias=null}
+          |  +-[IDENT] IdentNode: &apos;{synthetic-alias}&apos; {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: &apos;userName&apos; {originalText=userName}
+          \-[NAMED_PARAM] ParameterNode: &apos;?&apos; {name=name, expectedType=org.hibernate.type.StringType@49176e7}
+
+DEBUG [main] (ErrorCounter.java:68) - throwQueryException() : no errors
+DEBUG [main] (SqlGenerator.java:96) - -&gt; statement (SELECT [SELECT])
+DEBUG [main] (SqlGenerator.java:96) - ---&gt; selectStatement (SELECT [SELECT])
+DEBUG [main] (SqlGenerator.java:96) - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+DEBUG [main] (SqlGenerator.java:96) - -------&gt; selectColumn (userbean0_.id as id0_ [SELECT_EXPR])
+DEBUG [main] (SqlGenerator.java:96) - ---------&gt; selectExpr (userbean0_.id as id0_ [SELECT_EXPR])
+DEBUG [main] (SqlGenerator.java:96) - -----------&gt; selectAtom (userbean0_.id as id0_ [SELECT_EXPR])
+DEBUG [main] (SqlGenerator.java:96) - &lt;----------- selectAtom
+DEBUG [main] (SqlGenerator.java:96) - &lt;--------- selectExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;------- selectColumn
+DEBUG [main] (SqlGenerator.java:96) - -------&gt; selectColumn (userbean0_.dateOfBirth as dateOfBi2_0_, userbean0_.first_name as first3_0_, userbean0_.fondestMemory as fondestM4_0_, userbean0_.last_name as last5_0_, userbean0_.myCal as myCal0_, userbean0_.password as password0_, userbean0_.login_name as login8_0_ [SQL_TOKEN])
+DEBUG [main] (SqlGenerator.java:96) - ---------&gt; selectExpr (userbean0_.dateOfBirth as dateOfBi2_0_, userbean0_.first_name as first3_0_, userbean0_.fondestMemory as fondestM4_0_, userbean0_.last_name as last5_0_, userbean0_.myCal as myCal0_, userbean0_.password as password0_, userbean0_.login_name as login8_0_ [SQL_TOKEN])
+DEBUG [main] (SqlGenerator.java:96) - -----------&gt; selectAtom (userbean0_.dateOfBirth as dateOfBi2_0_, userbean0_.first_name as first3_0_, userbean0_.fondestMemory as fondestM4_0_, userbean0_.last_name as last5_0_, userbean0_.myCal as myCal0_, userbean0_.password as password0_, userbean0_.login_name as login8_0_ [SQL_TOKEN])
+DEBUG [main] (SqlGenerator.java:96) - &lt;----------- selectAtom
+DEBUG [main] (SqlGenerator.java:96) - &lt;--------- selectExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;------- selectColumn
+DEBUG [main] (SqlGenerator.java:96) - &lt;----- selectClause
+DEBUG [main] (SqlGenerator.java:96) - -----&gt; from (from [FROM])
+DEBUG [main] (SqlGenerator.java:96) - -------&gt; fromTable (tbl_user userbean0_ [FROM_FRAGMENT])
+DEBUG [main] (SqlGenerator.java:96) - &lt;------- fromTable
+DEBUG [main] (SqlGenerator.java:96) - &lt;----- from
+DEBUG [main] (SqlGenerator.java:96) - -----&gt; whereExpr (= [EQ])
+DEBUG [main] (SqlGenerator.java:96) - -------&gt; booleanExpr (= [EQ])
+DEBUG [main] (SqlGenerator.java:96) - ---------&gt; comparisonExpr (= [EQ])
+DEBUG [main] (SqlGenerator.java:96) - -----------&gt; binaryComparisonExpression (= [EQ])
+DEBUG [main] (SqlGenerator.java:96) - -------------&gt; expr (userbean0_.login_name [DOT])
+DEBUG [main] (SqlGenerator.java:96) - ---------------&gt; simpleExpr (userbean0_.login_name [DOT])
+DEBUG [main] (SqlGenerator.java:96) - -----------------&gt; addrExpr (userbean0_.login_name [DOT])
+DEBUG [main] (SqlGenerator.java:96) - &lt;----------------- addrExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;--------------- simpleExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;------------- expr
+DEBUG [main] (SqlGenerator.java:96) - -------------&gt; expr (? [NAMED_PARAM])
+DEBUG [main] (SqlGenerator.java:96) - ---------------&gt; simpleExpr (? [NAMED_PARAM])
+DEBUG [main] (SqlGenerator.java:96) - -----------------&gt; parameter (? [NAMED_PARAM])
+DEBUG [main] (SqlGenerator.java:96) - &lt;----------------- parameter
+DEBUG [main] (SqlGenerator.java:96) - &lt;--------------- simpleExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;------------- expr
+DEBUG [main] (SqlGenerator.java:96) - &lt;----------- binaryComparisonExpression
+DEBUG [main] (SqlGenerator.java:96) - &lt;--------- comparisonExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;------- booleanExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;----- whereExpr
+DEBUG [main] (SqlGenerator.java:96) - &lt;--- selectStatement
+DEBUG [main] (SqlGenerator.java:96) - &lt;- statement
+DEBUG [main] (QueryTranslatorImpl.java:218) - HQL: from com.fancythinking.reg.hibernate_example.bean.UserBean where userName = :name
+DEBUG [main] (QueryTranslatorImpl.java:219) - SQL: select userbean0_.id as id0_, userbean0_.dateOfBirth as dateOfBi2_0_, userbean0_.first_name as first3_0_, userbean0_.fondestMemory as fondestM4_0_, userbean0_.last_name as last5_0_, userbean0_.myCal as myCal0_, userbean0_.password as password0_, userbean0_.login_name as login8_0_ from tbl_user userbean0_ where userbean0_.login_name=?
+DEBUG [main] (ErrorCounter.java:68) - throwQueryException() : no errors
+DEBUG [main] (HQLQueryPlan.java:269) - HQL param location recognition took 15 mills (from UserBean where userName = :name)
+DEBUG [main] (SessionFactoryImpl.java:459) - Checking 0 named SQL queries
+DEBUG [main] (SessionImpl.java:221) - opened session at timestamp: 5495387870146560
+DEBUG [main] (ThreadLocalSessionContext.java:290) - allowing method [beginTransaction] in non-transacted context
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [beginTransaction] to proceed to real session
+DEBUG [main] (JDBCTransaction.java:54) - begin
+DEBUG [main] (ConnectionManager.java:421) - opening JDBC connection
+DEBUG [main] (DriverManagerConnectionProvider.java:93) - total checked-out connections: 0
+DEBUG [main] (DriverManagerConnectionProvider.java:99) - using pooled JDBC connection, pool size: 0
+DEBUG [main] (JDBCTransaction.java:59) - current autocommit status: false
+DEBUG [main] (JDBCContext.java:214) - after transaction begin
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [saveOrUpdate] to proceed to real session
+</system-out>
+  </testcase>
+  <testcase time="0.016" classname="com.fancythinking.reg.hibernate_example.bean.BinaryFileTest" name="testUpdate">
+    <error message="Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile" type="org.hibernate.MappingException">org.hibernate.MappingException: Unknown entity: com.fancythinking.reg.hibernate_example.bean.BinaryFile
+	at org.hibernate.impl.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:597)
+	at org.hibernate.impl.SessionImpl.getEntityPersister(SessionImpl.java:1339)
+	at org.hibernate.engine.ForeignKeys.isTransient(ForeignKeys.java:180)
+	at org.hibernate.event.def.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:512)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:80)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:70)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:508)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:500)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:301)
+	at $Proxy20.saveOrUpdate(Unknown Source)
+	at com.fancythinking.reg.hibernate_example.dal.DAO.save(DAO.java:24)
+	at com.fancythinking.reg.hibernate_example.SuperTest.create(SuperTest.java:37)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.createBinaryFile(BinaryFileTest.java:35)
+	at com.fancythinking.reg.hibernate_example.bean.BinaryFileTest.testUpdate(BinaryFileTest.java:53)
+</error>
+    <system-out>DEBUG [main] (BinaryFileUtil.java:18) - Reading in binary file named : F:/uploads/AllVenoxis.jpg
+DEBUG [main] (BinaryFileUtil.java:22) - File exists? true
+DEBUG [main] (BinaryFileUtil.java:24) - File size: 318053
+DEBUG [main] (BinaryFileUtil.java:44) - Num bytes read: 318053
+DEBUG [main] (BinaryFileUtil.java:46) - Closing input stream.
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [beginTransaction] to proceed to real session
+DEBUG [main] (ThreadLocalSessionContext.java:300) - allowing proxied method [saveOrUpdate] to proceed to real session
+</system-out>
+  </testcase>
+</testsuite>
