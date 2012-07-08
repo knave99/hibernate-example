@@ -4,10 +4,15 @@ package com.cloudshaped.generated;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -19,15 +24,16 @@ import javax.persistence.UniqueConstraint;
  */
 @Entity
 @Table(name = "service", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
-@NamedQueries (	{
-	@NamedQuery	(name="service.findByChannelType", query="from Service"),
-} )
 public class Service implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5917822840819637862L;
 	private long id;
 	private String name;
 	private Boolean isFree;
-	private Set<Productservice> productservices = new HashSet<Productservice>(0);
+	private Set<Product> products = new HashSet<Product>(0);
 	private Set<Channel> channels = new HashSet<Channel>(0);
 
 	public Service() {
@@ -38,11 +44,11 @@ public class Service implements java.io.Serializable {
 	}
 
 	public Service(long id, String name, Boolean isFree,
-			Set<Productservice> productservices, Set<Channel> channels) {
+			Set<Product> products, Set<Channel> channels) {
 		this.id = id;
 		this.name = name;
 		this.isFree = isFree;
-		this.productservices = productservices;
+		this.products = products;
 		this.channels = channels;
 	}
 
@@ -74,13 +80,16 @@ public class Service implements java.io.Serializable {
 		this.isFree = isFree;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "service")
-	public Set<Productservice> getProductservices() {
-		return this.productservices;
+	@ManyToMany ( cascade = CascadeType.ALL )
+	@JoinTable (name="productservice", joinColumns = { @JoinColumn (name="service_id") }, 
+				inverseJoinColumns = { @JoinColumn (name="product_id") }
+				)  
+	public Set<Product> getProducts() {
+		return this.products;
 	}
 
-	public void setProductservices(Set<Productservice> productservices) {
-		this.productservices = productservices;
+	public void setProducts(Set<Product> products) {
+		this.products = products;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "service")

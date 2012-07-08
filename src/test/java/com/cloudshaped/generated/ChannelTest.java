@@ -1,6 +1,7 @@
 package com.cloudshaped.generated;
 
 import java.util.List;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 
@@ -20,21 +21,22 @@ public class ChannelTest extends TestCase {
 		super(testName);
 		// TODO Auto-generated constructor stub
 	}
-	ProductDAO pdao = new ProductDAO();
-	public void testProduct() {
+	
+	
+
+	
+
+
+	
+	ChannelDAO cd = new ChannelDAO();
+	public void testChannel() {
 
 		HibernateUtil.beginTransaction();
-
-		Product bigBundle = new Product();
-		bigBundle.setName("Big");
-		List<Product> list = pdao.findByExample(bigBundle, true);
-		logger.info("Product list is for fuzzy search Big is:");
-		for ( Product p : list) {
-			logger.info(p.getName());	
-		}
-		assertTrue( list.size() == 1);		
+		Channel c = cd.findByPrimaryKey(1L);
+		logger.debug("name is " + c.getName());
+		assertTrue(c.getName().trim().equalsIgnoreCase("BBC1"));
 		HibernateUtil.commitTransaction();
-
 	}
+
 
 }

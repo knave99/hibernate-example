@@ -21,11 +21,11 @@ public class ServiceTest extends TestCase {
 		super.setUp();
 	}
 	
-	ServiceDAO sd = new ServiceDAO();
+	ServiceDAO sdao = new ServiceDAO();
 	public void testService() {
 		HibernateUtil.beginTransaction();
 		Set<Channel> channelSet;
-		List<Service> serviceList = sd.findAll();
+		List<Service> serviceList = sdao.findAll();
 		logger.info("List of Services is ");
 		for ( Service s : serviceList) {
 			logger.info(s.getName() + "\n");
@@ -39,6 +39,22 @@ public class ServiceTest extends TestCase {
 		
 		HibernateUtil.commitTransaction();
 		
+	}
+	
+	public void testManyToMany() {
+
+		HibernateUtil.beginTransaction();
+
+		Service s = sdao.findByPrimaryKey(1L);
+		Set<Product> products = s.getProducts(); 
+		for ( Product p : products ) {
+			logger.info(p.getName());
+		}
+
+		 
+		
+		
+		HibernateUtil.commitTransaction();
 	}
 
 
