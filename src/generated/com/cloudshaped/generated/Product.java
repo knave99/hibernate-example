@@ -24,7 +24,8 @@ import org.hibernate.annotations.CascadeType;
 @Entity
 @Table(name = "product", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
 @NamedQueries (	{
-	@NamedQuery	(name="product.findFreeChannels", query="from Channel where "),
+	@NamedQuery	(name="product.findFree", query="Select p from Product p join p.services s where s.free = true"),
+	@NamedQuery	(name="product.findAll", query="from Product")
 } )
 public class Product implements java.io.Serializable {
 

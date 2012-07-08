@@ -72,11 +72,11 @@ public class Service implements java.io.Serializable {
 	}
 
 	@Column(name = "\"isFree\"")
-	public Boolean getIsFree() {
+	public Boolean isFree() {
 		return this.isFree;
 	}
 
-	public void setIsFree(Boolean isFree) {
+	public void setFree(Boolean isFree) {
 		this.isFree = isFree;
 	}
 
