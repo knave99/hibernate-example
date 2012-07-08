@@ -58,7 +58,7 @@ public class Product implements java.io.Serializable {
 		this.name = name;
 	}
 
-	@Column(name = "isFree")
+	@Column(name = "\"isFree\"")
 	public Boolean getIsFree() {
 		return this.isFree;
 	}
