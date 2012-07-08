@@ -1,6 +1,8 @@
 package com.fancythinking.reg.hibernate_example.bean;
 
+import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import junit.framework.Test;
@@ -55,6 +57,28 @@ public class TestUserBean extends SuperTest<UserBean> {
 		UserBean ub2 = (UserBean) query.uniqueResult();
 		
 		assertTrue(ub1.getUserName().equals(ub2.getUserName()));
+		HibernateUtil.commitTransaction();
+	}
+	
+	public void testYoungerThan() {
+		System.out.println("Hello");
+		logger.debug("Testing YoungerThan");
+		UserBean ub1 = createUserBean();		
+		Session session = HibernateUtil.beginTransaction();
+		Query query = session.getNamedQuery("user.youngerThan");
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.YEAR, 1950);
+		query.setDate("dob", cal.getTime());
+		List<UserBean> list = query.list();		
+		HibernateUtil.commitTransaction();
+		HibernateUtil.closeSession();
+		DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
+		logger.info("Listing " +  list.size() + " users with dates of birth > " + df.format(cal.getTime()));
+		for ( UserBean ub : list ) {
+			logger.info("user name: "+ ub.getUserName() + " dob: " + ub.getDateOfBirth());
+		}
+		
+		
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -152,20 +176,29 @@ public class TestUserBean extends SuperTest<UserBean> {
 	}
 	
 	protected UserBean createUserBean() {
+		return createUserBean(null);		
+	}
+	
+	protected UserBean createUserBean(Date date) {
 		UserBean user = new UserBean();
 		Session session = HibernateUtil.beginTransaction();
 		user.setUserName("Reg " + Math.random());
 		user.setFirstName("FN: Reg " + Math.random());
 		user.setLastName("LN: Stuart " + Math.random());
 		user.setPassword("Password " + Math.random());
-		
+
 		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.YEAR, 1975);
-		cal.set(Calendar.MONTH, 4);
-		cal.set(Calendar.DAY_OF_MONTH, 5);
-		cal.set(Calendar.HOUR, 13);
-		cal.set(Calendar.MINUTE, 12);
-		cal.set(Calendar.SECOND, 15);
+		if ( date == null ) {
+			cal.set(Calendar.YEAR, 1975);
+			cal.set(Calendar.MONTH, 4);
+			cal.set(Calendar.DAY_OF_MONTH, 5);
+			cal.set(Calendar.HOUR, 13);
+			cal.set(Calendar.MINUTE, 12);
+			cal.set(Calendar.SECOND, 15);			
+		} else {
+			cal.setTime(date);
+		}
+
 		user.setMyCal(cal);		
 		user.setDateOfBirth(cal.getTime());
 		user.setFondestMemory("This is my fondest memory!  blah blah blah!");
